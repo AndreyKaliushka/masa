@@ -1,0 +1,22 @@
+.main-header {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  z-index: 3;
+}
+
+.main-header__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include vp-1199 {
+    max-width: 1199px;
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    max-width: 767px;
+    padding: 0 16px 0 14px;
+  }
+}

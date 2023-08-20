@@ -1,7 +1,12 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {setHeroSwiper} from './blocks/page-swiper';
+import {openCloseMenu, openCloseSubMenu} from './blocks/menu';
 
+setHeroSwiper();
+openCloseMenu();
+openCloseSubMenu();
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
