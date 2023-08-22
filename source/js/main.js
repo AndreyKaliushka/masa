@@ -1,12 +1,16 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {setHeroSwiper} from './blocks/page-swiper';
+import {setHeroSwiper, setProgramsSwiper} from './blocks/page-swiper';
 import {openCloseMenu, openCloseSubMenu} from './blocks/menu';
+import {initModal} from './blocks/open-modal';
+import {CustomSelect} from './modules/form-validate/custom-select';
 
 setHeroSwiper();
+setProgramsSwiper();
 openCloseMenu();
 openCloseSubMenu();
+initModal();
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -26,6 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    const select = new CustomSelect();
+    select.init();
   });
 });
 

@@ -1,3 +1,8 @@
+@keyframes animationOverlay {
+  from {background-color: rgba(13, 29, 51, 0.0)}
+  to {background-color: rgba(13, 29, 51, 0.40)}
+}
+
 .wrapper {
   position: relative;
 
@@ -59,7 +64,9 @@
     height: 100%;
     z-index: 2;
     position: absolute;
-    background-color:rgba(13, 29, 51, 0.40);
+    animation-name: animationOverlay;
+    animation-duration: 2s;
+    background-color: rgba(13, 29, 51, 0.40);
   }
 }
 

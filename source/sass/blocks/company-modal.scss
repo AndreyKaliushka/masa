@@ -1,0 +1,364 @@
+.company-modal::backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(13, 29, 51, 0.4);
+}
+
+.company-modal {
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: transparent;
+  z-index: 5;
+  border: none;
+  padding-top: 90px;
+
+  @include vp-1199 {
+    padding: 204px 129px 0;
+  }
+
+  @include vp-767 {
+    padding: 23px 15px 0;
+  }
+}
+
+.company-modal__container {
+  max-width: 510px;
+  padding: 53px 80px 60px;
+  background-color: $color-default-white;
+  margin: 0 auto;
+  border-radius: 16px;
+  position: relative;
+
+  @include vp-1199 {
+    max-width: unset;
+    width: 100%;
+    padding: 55px 80px 60px;
+  }
+
+  @include vp-767 {
+    padding: 37px 15px 40px;
+    max-width: 363px;
+  }
+}
+
+.company-modal__button-close {
+  padding: 0;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include vp-767 {
+    right: 23px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.company-modal__icon {
+  @include vp-767 {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.company-modal__container h3 {
+  margin: 0;
+  margin-bottom: 7px;
+  padding: 0;
+  color: $color-light-blue;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36px;
+
+  @include vp-1199 {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 13px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 8px;
+  }
+}
+
+.company-modal__container p {
+  margin: 0;
+  margin-bottom: 19px;
+  padding: 0;
+  color: $color-dark-brown;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+
+  @include vp-1199 {
+    line-height: 20px;
+    margin-bottom: 21px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.company-modal__container br {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.company-modal__input {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 17px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include vp-1199 {
+    margin-bottom: 16px;
+  }
+}
+
+.company-modal__input span {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  display: block;
+  color: $color-dark-brown;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+
+  @include vp-1199 {
+    line-height: 20px;
+    margin-bottom: 7px;
+  }
+
+  @include vp-767 {
+    line-height: 14px;
+    margin-bottom: 7px;
+  }
+}
+
+.company-modal__input input {
+  padding: 16px 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  background-color: transparent;
+  font-size: 14px;
+
+  &:disabled {
+    border: 1px solid rgba(169, 175, 183, 0.50);
+    background: rgba(169, 175, 183, 0.20);
+  }
+
+  &:hover {
+    border: 1px solid rgba(72, 72, 72, 1);
+  }
+
+  &:focus {
+    border: 1px solid rgba(72, 72, 72, 1);
+    outline: none;
+  }
+
+  &:focus-visible {
+    border: 1px solid rgba(72, 72, 72, 1);
+    outline: none;
+  }
+
+  &:active {
+    border: 1px solid rgba(72, 72, 72, 1);
+    outline: none;
+  }
+
+  @include vp-767 {
+    padding: 13px 25px;
+  }
+}
+
+.company-modal__select {
+  margin: 0;
+  padding: 0 0 12px;
+  width: 100%;
+}
+
+.is-open .company-modal__button-select {
+  border: 1px solid $color-dark-brown;
+}
+
+.company-modal__select-list {
+  border-radius: 8px;
+  border: 1px solid $color-dark-brown;
+  max-height: 182px;
+}
+
+.company-modal__select-item {
+  color: $color-dark-brown;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  padding: 17px 20px;
+
+
+}
+
+.company-modal__select-item:hover:not(.focus-visible) {
+  background-color: $color-light-blue;
+  color: $color-default-white;
+}
+
+.company-modal__select p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 7px;
+  display: block;
+  color: $color-dark-brown;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: start;
+
+  @include vp-1199 {
+    line-height: 20px;
+    margin-bottom: 6px;
+  }
+
+  @include vp-767 {
+    line-height: 14px;
+  }
+}
+
+.company-modal__button-select {
+  padding: 10px 20px;
+  min-height: 50px;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  color: var(--text, #484848);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+
+  @include vp-767 {
+    min-height: 44px;
+  }
+
+  &:hover {
+    border: 1px solid $color-dark-brown;
+  }
+
+  &:focus {
+    border: 1px solid $color-dark-brown;
+  }
+
+  &:focus-visible {
+    border: 1px solid $color-dark-brown;
+  }
+}
+
+.company-modal__checkbox {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.company-modal__checkbox:last-of-type {
+  margin: 0;
+  padding: 0;
+  margin-top: 2px;
+  margin-bottom: 29px;
+
+  @include vp-767 {
+    margin-top: -6px;
+    margin-bottom: 7px;
+  }
+}
+
+.company-modal__checkbox-label {
+  color: $color-dark-brown;
+  opacity: 0.9;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+}
+
+.company-modal__checkbox label {
+  padding-left: 30px;
+}
+
+.custom-toggle--checkbox .company-modal__toggle-icon, .custom-toggle--radio .company-modal__toggle-icon {
+  border-radius: 2px;
+  border: 1px solid rgba(49, 109, 194, 0.7);
+  width: 20px;
+  height: 20px;
+  top: 6px;
+
+  @include vp-767 {
+    top: 12px;
+  }
+}
+
+.custom-toggle--checkbox .company-modal__toggle-icon::before, .custom-toggle--radio .company-modal__toggle-icon::before {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-toggle input:checked+.company-modal__toggle-icon {
+  border: 1px solid $color-light-blue;
+  background-color: $color-light-blue;
+}
+
+.custom-toggle input:checked+.company-modal__toggle-icon::before  {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  background-image: url('../img/svg/tick.svg');
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+}
+
+.is-invalid.custom-toggle--checkbox .company-modal__toggle-icon, .custom-toggle--radio .company-modal__toggle-icon {
+  border: 1px solid #FF5E66;
+  opacity: 0.7;
+  background: rgba(255, 94, 102, 0.20);
+}
+
+.company-modal__button {
+  width: 194px;
+  margin: 0 auto;
+  background-color: $color-default-white;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.company-modal__select-text {
+  color: $color-dark-brown;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}

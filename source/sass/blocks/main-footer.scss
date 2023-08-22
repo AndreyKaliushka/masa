@@ -10,6 +10,11 @@
   flex-wrap: wrap;
   align-items: center;
 
+  @media (max-width: 1300px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
   @include vp-1199 {
     max-width: 768px;
     padding: 30px 45px 50px;
