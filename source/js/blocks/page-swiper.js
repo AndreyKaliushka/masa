@@ -66,7 +66,6 @@ const setProgramsSwiper = () => {
 
       scrollbar: {
         el: '.programs__swiper-scrollbar',
-        dragSize: 392,
       },
     });
   }

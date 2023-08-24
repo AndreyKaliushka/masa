@@ -4,7 +4,7 @@
 
 .programs__wrapper {
   max-width: 1440px;
-  padding: 63px 6.9444444444% 60px;
+  padding: 63px 6.9444444444% 111px;
   margin: 0 auto;
 
   @media (max-width: 1300px) {
@@ -13,11 +13,11 @@
   }
 
   @include vp-1199 {
-    padding: 71px 0 50px 45px;
+    padding: 71px 0 91px 45px;
   }
 
   @include vp-767 {
-    padding: 39px 15px;
+    padding: 39px 15px 67px;
   }
 }
 

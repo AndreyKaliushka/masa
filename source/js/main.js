@@ -5,12 +5,24 @@ import {setHeroSwiper, setProgramsSwiper} from './blocks/page-swiper';
 import {openCloseMenu, openCloseSubMenu} from './blocks/menu';
 import {initModal} from './blocks/open-modal';
 import {CustomSelect} from './modules/form-validate/custom-select';
+import {initAccordions} from './blocks/init-accordion';
 
 setHeroSwiper();
 setProgramsSwiper();
 openCloseMenu();
 openCloseSubMenu();
 initModal();
+initAccordions();
+
+// const changeText = () => {
+//   const parent = document.querySelector('.instructions__description');
+//   const heading = parent.getElementsByTagName('h2')['0'];
+//   const sometext = parent.getElementsByTagName('p')['0'];
+//   heading.textContent = 'Никак не доехать';
+//   sometext.textContent = 'Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтерскую программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.';
+// };
+
+// changeText();
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
