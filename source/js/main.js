@@ -1,18 +1,22 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {setHeroSwiper, setProgramsSwiper} from './blocks/page-swiper';
+import {setHeroSwiper, setProgramsSwiper, setReviewsSwiper} from './blocks/page-swiper';
 import {openCloseMenu, openCloseSubMenu} from './blocks/menu';
 import {initModal} from './blocks/open-modal';
 import {CustomSelect} from './modules/form-validate/custom-select';
 import {initAccordions} from './blocks/init-accordion';
+import {marker, map} from './blocks/map';
 
 setHeroSwiper();
 setProgramsSwiper();
+setReviewsSwiper();
 openCloseMenu();
 openCloseSubMenu();
 initModal();
 initAccordions();
+marker;
+map;
 
 // const changeText = () => {
 //   const parent = document.querySelector('.instructions__description');

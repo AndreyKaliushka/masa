@@ -71,4 +71,41 @@ const setProgramsSwiper = () => {
   }
 };
 
-export {setHeroSwiper, setProgramsSwiper};
+const setReviewsSwiper = () => {
+  if (document.body.contains(document.querySelector('.reviews__swiper-wrapper'))) {
+    // eslint-disable-next-line no-new
+    new Swiper('.reviews__swiper-wrapper', {
+      loop: false,
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+          allowTouchMove: true,
+        },
+        768: {
+          slidesPerView: 1.276271,
+          spaceBetween: 30,
+          allowTouchMove: true,
+        },
+        1200: {
+          slidesPerView: 2,
+          spaceBetween: 32,
+          allowTouchMove: false,
+        },
+      },
+
+      navigation: {
+        nextEl: '.reviews__swiper-button--next',
+        prevEl: '.reviews__swiper-button--prev',
+      },
+
+      scrollbar: {
+        el: '.reviews__swiper-scrollbar',
+      },
+    });
+  }
+
+};
+
+export {setHeroSwiper, setProgramsSwiper, setReviewsSwiper};

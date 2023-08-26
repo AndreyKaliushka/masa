@@ -1,6 +1,11 @@
 .faq {
   padding: 60px 6.9444444444% 60px;
 
+  @media (min-width: 1440px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
   @media (max-width: 1300px) {
     padding-left: 5%;
     padding-right: 5%;
@@ -81,15 +86,16 @@
 
 .faq__accordion-button {
   padding: 0;
-  padding: 41px 39px 39px 39px;
+  padding: 32px 39px 32px 39px;
   margin: 0;
   transition: .3s;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   border-radius: 16px;
   border: 1px solid $color-light-blue;
+  position: relative;
+  min-height: 120px;
 
 
   &:focus {
@@ -101,24 +107,30 @@
   }
 
   @include vp-1199 {
-    padding: 36px 29px 29px;
+    padding: 24px 29px 24px;
+    min-height: 100px;
   }
 
   @include vp-767 {
-    padding: 21px 14px 19px 14px;
+    min-height: 80px;
+    padding: 19px 14px 19px 14px;
   }
 }
 
 .faq__accordion-element.is-active .faq__accordion-button {
   transition: .3s;
-  padding-bottom: 12px;
+  padding-top: 41px;
+  padding-bottom: 16px;
+  min-height: 70px;
 
   @include vp-1199 {
-    padding-bottom: 15px;
+    padding-top: 34px;
+    padding-bottom: 23px;
   }
 
   @include vp-767 {
-    padding-bottom: 14px;
+    padding-top: 22px;
+    padding-bottom: 15px;
   }
 }
 
@@ -130,7 +142,9 @@
   border: 1px solid transparent;
   position: relative;
   background-color: $color-light-blue;
-  margin-top: -2px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
 
   &:disabled {
     border: 1px solid rgba(28, 51, 116, 0.3);
@@ -174,11 +188,13 @@
   }
 
   @include vp-1199 {
-    margin-top: -7px;
+    right: 29px;
+    top: 28px;
   }
 
   @include vp-767 {
-    margin-top: -2px;
+    right: 14px;
+    top: 20px;
   }
 }
 
