@@ -243,11 +243,13 @@
     }
 
     .custom-select__button {
-      border: 2px solid #ff1553;
+      border-radius: 8px;
+      border: 1px solid #FF5E66;
+      background: rgba(255, 94, 102, 0.20);
 
       &:focus,
       &:hover {
-        border: 2px solid rgba(#ff1553, 0.5);
+        border: 1px solid #ff5e66;
       }
     }
   }

@@ -450,7 +450,7 @@
               <div class="instructions__picture">
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="img/instructions/instructions-desktop.webp 1x, img/instructions/instructions-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructions/instructions-tablet.webp 1x 1x, img/instructions/instructions-tablet@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/instructions/instructions-tablet.webp 1x, img/instructions/instructions-tablet@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/instructions/instructions-mobile.webp 1x, img/instructions/instructions-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/instructions/instructions-desktop.png 1x, img/instructions/instructions-desktop@2x.png 2x">
                   <source media="(min-width: 768px)" srcset="img/instructions/instructions-tablet.png 1x, img/instructions/instructions-tablet@2x.png 2x">
@@ -767,6 +767,78 @@
             <div class="company-information__map" id="map"></div>
           </div>
         </section>
+
+        <section class="user-contacts">
+          <div class="user-contacts__wrapprer">
+            <div class="user-contacts__content">
+              <div class="user-contacts__background-img">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/user-contacts/user-contacts-desktop.webp 1x, img/user-contacts/user-contacts-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/user-contacts/user-contacts-tablet.webp 1x, img/user-contacts/user-contacts-tablet@2x.webp 2x">
+                  <source media="(min-width: 1200px)" srcset="img/user-contacts/user-contacts-desktop.png 1x, img/user-contacts/user-contacts-desktop@2x.png 2x">
+                  <img src="img/user-contacts/user-contacts-tablet.png" srcset="img/user-contacts/user-contacts-tablet@2x.png 2x" alt="На фотографии изображен ляж.">
+                </picture>
+              </div>
+
+              <div class="user-contacts__form" data-form-validate="data-form-validate" data-callback="base">
+                <h2>Напишите нам</h2>
+                <p>Оставьте ваши контакты, если у вас остались вопросы – мы на них ответим!</p>
+                <form method="post" action="https://echo.htmlacademy.ru/">
+                  <div class="user-contacts__form-wrapper">
+                    <div class="custom-input user-contacts__input" data-validate-type="text" data-limitation="name" data-required="data-required">
+                      <p>Имя</p>
+                      <input type="text" name="user-name-1" placeholder="" aria-label="Введите ваше имя."/>
+                    </div>
+
+                    <div class="custom-input user-contacts__input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                      <p>Телефон</p>
+                      <input type="tel" name="user-phone" placeholder="" aria-label="Введите ваш телефон."/>
+                    </div>
+
+                    <div class="auto-resize-textarea user-contacts__textarea">
+                      <p>Ваше сообщение</p>
+                      <textarea name="example" rows="2" aria-label="textarea"></textarea>
+                    </div>
+
+                    <div class="custom-select user-contacts__select" data-select data-validate-type="select" data-name="some-name" data-id="id-example-2" data-required="true">
+                      <p>Выберите город</p>
+                      <button class="custom-select__button user-contacts__button-select" type="button" aria-label="Выберите одну из опций">
+                        <span class="custom-select__text user-contacts__select-text"></span>
+                        <span class="custom-select__icon user-contacts__select-icon"></span>
+                      </button>
+                      <ul class="custom-select__list user-contacts__select-list" role="listbox">
+                        <li class="custom-select__item user-contacts__select-item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
+                        <li class="custom-select__item user-contacts__select-item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Москва</li>
+                        <li class="custom-select__item user-contacts__select-item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Новосибирск</li>
+                        <li class="custom-select__item user-contacts__select-item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Екатеринбург</li>
+                        <li class="custom-select__item user-contacts__select-item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Владивосток</li>
+                        <li class="custom-select__item user-contacts__select-item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Томск</li>
+                      </ul>
+                    </div>
+
+                    <div class="custom-toggle custom-toggle--checkbox user-contacts__checkbox" data-validate-type="checkbox" data-message-base="">
+                      <label>
+                        <input type="checkbox" value="user-agreement-1" name="user-agreement"/>
+                        <span class="custom-toggle__icon user-contacts__toggle-icon">
+                        </span>
+                        <span class="custom-toggle__label user-contacts__checkbox-label">Я согласен на обработку моих персональных данных</span>
+                      </label>
+                    </div>
+
+                    <button class="user-contacts__button general-button">
+                      <span>отправить</span>
+                      <div class="user-contacts__icon-wrapper general-button__icon-wrapper">
+                        <svg class="user-contacts__icon general-button__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
 
@@ -856,7 +928,7 @@
                   <input type="tel" name="user-phone" placeholder="" aria-label="Введите ваш телефон."/>
                 </div>
 
-                <div class="custom-select company-modal__select" data-select data-validate-type="select" data-name="some-name" data-id="id-example-2" data-message-base="Поле обязательно к заполнению">
+                <div class="custom-select company-modal__select" data-select data-validate-type="select" data-name="some-name" data-id="id-example-2" data-required="true">
                   <p>Выберите город</p>
                   <button class="custom-select__button company-modal__button-select" type="button" aria-label="Выберите одну из опций">
                     <span class="custom-select__text company-modal__select-text"></span>
@@ -891,6 +963,7 @@
                 </button>
               </div>
             </form>
+          </div>
         </div>
       </dialog>
 

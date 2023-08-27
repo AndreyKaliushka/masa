@@ -1,0 +1,556 @@
+.user-contacts {
+  width: 100%;
+}
+
+.user-contacts__wrapprer {
+  max-width: 1440px;
+  padding: 118px 6.9444444444% 120px;
+  margin: 0 auto;
+
+  @media (min-width: 1440px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  @media (max-width: 1300px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  @include vp-1199 {
+    padding: 99px 45px 100px 45px;
+  }
+
+  @include vp-767 {
+    padding: 70px 15px 67px;
+  }
+}
+
+.user-contacts__content {
+  position: relative;
+}
+
+.user-contacts__background-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.user-contacts__background-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.user-contacts__form {
+  position: relative;
+  z-index: 2;
+  padding: 82px 74px 51px;
+  max-width: 498px;
+  background-color: $color-light-blue;
+  border-radius: 16px;
+}
+
+.user-contacts__form h2 {
+  margin: 0;
+  padding: 0;
+  color: $color-default-white;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 25px;
+
+  @include vp-1199 {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.user-contacts__form p {
+  margin: 0;
+  padding: 0;
+  color: rgba(240, 239, 233, 1);
+  opacity: 0.9;
+  line-height: 26px;
+  margin-bottom: 19px;
+}
+
+.user-contacts__input {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: rgba(240, 239, 233, 1);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  @include vp-1199 {
+    margin-bottom: 16px;
+  }
+}
+
+.user-contacts__input p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  display: block;
+  color: rgba(240, 239, 233, 1);
+  opacity: 0.8;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+
+  @include vp-1199 {
+    line-height: 20px;
+    margin-bottom: 7px;
+  }
+
+  @include vp-767 {
+    line-height: 14px;
+    margin-bottom: 7px;
+  }
+}
+
+.user-contacts__input input::placeholder {
+  color: $color-default-white;
+}
+
+.user-contacts__input input {
+  padding: 16px 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  font-size: 14px;
+  color: $color-default-white;
+
+  &:disabled {
+    border: 1px solid rgba(169, 175, 183, 0.50);
+    background: rgba(169, 175, 183, 0.20);
+  }
+
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+    opacity: 1;
+  }
+
+  &:focus {
+    border: 1px solid rgba(255, 255, 255, 1);
+    outline: none;
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    border: 1px solid rgba(255, 255, 255, 1);
+    outline: none;
+    opacity: 1;
+  }
+
+  &:active {
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    opacity: 1;
+  }
+
+  @include vp-767 {
+    padding: 13px 25px;
+  }
+}
+
+.user-contacts__input:hover p{
+  color: rgba(240, 239, 233, 1);
+  opacity: 1;
+}
+
+.user-contacts__input:focus p{
+  border: none;
+  outline: none;
+  color: rgba(240, 239, 233, 1);
+  opacity: 1;
+}
+
+.user-contacts__input:focus-visible p{
+  border: none;
+  outline: none;
+  color: rgba(240, 239, 233, 1);
+  opacity: 1;
+}
+
+.user-contacts__input:active p{
+  border: none;
+  outline: none;
+  color: rgba(240, 239, 233, 1);
+  opacity: 1;
+}
+
+.user-contacts__input {
+  &:disabled input {
+    border: 1px solid rgba(169, 175, 183, 0.50);
+    background: rgba(169, 175, 183, 0.20);
+  }
+
+  &:hover input {
+    border: 1px solid rgba(255, 255, 255, 1);
+    opacity: 1;
+  }
+
+  &:focus input {
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    opacity: 1;
+  }
+
+  &:focus-visible input {
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    opacity: 1;
+  }
+
+  &:active input {
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+  }
+}
+
+.user-contacts__textarea {
+  margin-bottom: 12px;
+}
+
+.user-contacts__textarea textarea {
+  padding: 18px 25px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  font-size: 14px;
+  min-height: 98px;
+  color: $color-default-white;
+
+  &:disabled {
+    border: 1px solid rgba(169, 175, 183, 0.50);
+    background: rgba(169, 175, 183, 0.20);
+  }
+
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+    opacity: 1;
+  }
+
+  &:focus {
+    border: 1px solid rgba(255, 255, 255, 1);
+    outline: none;
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    border: 1px solid rgba(255, 255, 255, 1);
+    outline: none;
+    opacity: 1;
+  }
+
+  &:active {
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    opacity: 1;
+  }
+
+  @include vp-767 {
+    padding: 13px 25px;
+  }
+}
+
+.user-contacts__textarea {
+  &:disabled textarea {
+    border: 1px solid rgba(169, 175, 183, 0.50);
+    background: rgba(169, 175, 183, 0.20);
+  }
+
+  &:hover textarea {
+    border: 1px solid rgba(255, 255, 255, 1);
+    opacity: 1;
+  }
+
+  &:focus textarea {
+    border: 1px solid rgba(255, 255, 255, 1);
+    outline: none;
+    opacity: 1;
+  }
+
+  &:focus-visible textarea {
+    border: 1px solid rgba(255, 255, 255, 1);
+    outline: none;
+    opacity: 1;
+  }
+
+  &:active textarea {
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+    opacity: 1;
+  }
+}
+
+.user-contacts__textarea p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 8px;
+  display: block;
+  color: rgba(240, 239, 233, 1);
+  opacity: 0.8;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: start;
+
+  @include vp-1199 {
+    line-height: 20px;
+    margin-bottom: 6px;
+  }
+
+  @include vp-767 {
+    line-height: 14px;
+  }
+}
+
+.user-contacts__textarea {
+  &:disabled  p {
+    color: rgba(240, 239, 233, 1);
+    opacity: 1;
+  }
+
+  &:hover p {
+    color: rgba(240, 239, 233, 1);
+    opacity: 1;
+  }
+
+  &:focus p {
+    color: rgba(240, 239, 233, 1);
+    opacity: 1;
+  }
+
+  &:focus-visible p {
+    color: rgba(240, 239, 233, 1);
+    opacity: 1;
+  }
+
+  &:active p {
+    color: rgba(240, 239, 233, 1);
+    opacity: 1;
+  }
+}
+
+.user-contacts__select {
+  margin: 0;
+  padding: 0 0 12px;
+  width: 100%;
+}
+
+.is-open .company-modal__button-select {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.user-contacts__select-list {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-height: 182px;
+}
+
+.user-contacts__select-item {
+  color: $color-dark-brown;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  padding: 17px 20px;
+}
+
+.user-contacts__select-item:hover:not(.focus-visible) {
+  background-color: $color-light-blue;
+  color: $color-default-white;
+}
+
+.user-contacts__select p {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  display: block;
+  color: $color-default-white;
+  opacity: 0.8;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: start;
+
+  @include vp-1199 {
+    line-height: 20px;
+    margin-bottom: 6px;
+  }
+
+  @include vp-767 {
+    line-height: 14px;
+  }
+}
+
+.user-contacts__button-select {
+  padding: 10px 20px;
+  min-height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: $color-dark-brown;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+
+  @include vp-767 {
+    min-height: 44px;
+  }
+
+  &:hover {
+    border: 1px solid $color-dark-brown;
+  }
+
+  &:focus {
+    border: 1px solid $color-dark-brown;
+  }
+
+  &:focus-visible {
+    border: 1px solid $color-dark-brown;
+  }
+}
+
+.user-contacts__select-icon {
+  background-color: $color-default-white;
+  width: 14px;
+  height: 7px;
+}
+
+.user-contacts__checkbox {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.user-contacts__checkbox:last-of-type {
+  margin: 0;
+  padding: 0;
+  margin-top: 2px;
+  margin-bottom: 39px;
+
+  @include vp-767 {
+    margin-top: -6px;
+    margin-bottom: 7px;
+  }
+}
+
+.user-contacts__checkbox-label {
+  color: $color-default-white;
+  opacity: 0.9;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px; /* 100% */
+}
+
+.user-contacts__checkbox label {
+  padding-left: 30px;
+}
+
+.custom-toggle--checkbox .user-contacts__toggle-icon, .custom-toggle--radio .user-contacts__toggle-icon {
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  width: 20px;
+  height: 20px;
+  top: 6px;
+
+  @include vp-767 {
+    top: 12px;
+  }
+}
+
+.custom-toggle--checkbox .user-contacts__toggle-icon::before, .custom-toggle--radio .user-contacts__toggle-icon::before {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-toggle input:checked+.user-contacts__toggle-icon {
+  border: 1px solid $color-default-white;
+  background-color: $color-default-white;
+}
+
+.custom-toggle input:checked+.user-contacts__toggle-icon::before  {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  background-image: url('../img/svg/tick-blue.svg');
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+}
+
+.is-invalid.custom-toggle--checkbox .user-contacts__toggle-icon, .custom-toggle--radio .user-contacts__toggle-icon {
+  border: 1px solid #FF5E66;
+  opacity: 0.7;
+  background: rgba(255, 94, 102, 0.20);
+}
+
+.user-contacts__button {
+  width: 100%;
+  margin: 0 auto;
+  background-color: transparent;
+  border: 1px solid $color-default-white;
+  color: $color-default-white;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.user-contacts__button span {
+  color: $color-default-white;
+}
+
+.user-contacts__icon-wrapper {
+  background-color: $color-default-white;
+  stroke: $color-light-blue;
+}
+
+.user-contacts__icon {
+  stroke: $color-light-blue;
+}
+
+.user-contacts__select-text {
+  color: $color-dark-brown;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+}
