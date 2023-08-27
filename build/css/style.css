@@ -2586,10 +2586,10 @@ button,
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: opacity 0.1s ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1s ease, -webkit-transform 0.1s ease;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+  transition: transform 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease;
   pointer-events: none;
 }
 @media screen and (max-width: 767px) {
@@ -2606,10 +2606,10 @@ button,
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  transition: transform 0.3s ease, opacity 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: opacity 0.1s ease, -webkit-transform 0.1s ease;
+  transition: opacity 0.1s ease, -webkit-transform 0.1s ease;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+  transition: transform 0.1s ease, opacity 0.1s ease, -webkit-transform 0.1s ease;
   pointer-events: none;
 }
 @media screen and (max-width: 767px) {
@@ -2647,8 +2647,8 @@ button,
   border-radius: 5px;
   outline: none;
   cursor: pointer;
-  -webkit-transition: border 0.3s ease;
-  transition: border 0.3s ease;
+  -webkit-transition: border 0.1s ease;
+  transition: border 0.1s ease;
 }
 .custom-select__button:hover {
   border: 2px solid rgba(0, 0, 0, 0.5);
@@ -2677,15 +2677,15 @@ button,
           transform: translateY(100%);
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: visibility 0.3s ease, opacity 0.3s ease;
-  transition: visibility 0.3s ease, opacity 0.3s ease;
+  -webkit-transition: visibility 0.1s ease, opacity 0.1s ease;
+  transition: visibility 0.1s ease, opacity 0.1s ease;
 }
 .custom-select__item {
   padding: 5px;
   outline: none;
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  -webkit-transition: background-color 0.1s ease;
+  transition: background-color 0.1s ease;
 }
 .custom-select__item[aria-selected=true] {
   background-color: #ffffff;
@@ -2743,10 +2743,10 @@ button,
   height: 10px;
   margin-left: auto;
   background-color: #000000;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.1s ease;
+  transition: -webkit-transform 0.1s ease;
+  transition: transform 0.1s ease;
+  transition: transform 0.1s ease, -webkit-transform 0.1s ease;
   -webkit-clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
           clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
 }
@@ -3215,6 +3215,26 @@ button,
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  color: #316dc2;
+}
+.general-button:hover {
+  background-color: #316dc2;
+  color: #ffffff;
+}
+.general-button:focus {
+  outline: none;
+  background-color: #316dc2;
+  color: #ffffff;
+}
+.general-button:focus-visible {
+  outline: none;
+  background-color: #316dc2;
+  color: #ffffff;
+}
+.general-button:active {
+  outline: none;
+  background-color: #316dc2;
+  color: rgba(255, 255, 255, 0.7);
 }
 @media (max-width: 767px) {
   .general-button {
@@ -3234,7 +3254,6 @@ button,
   line-height: 14px;
   letter-spacing: 0.28px;
   text-transform: uppercase;
-  color: #316dc2;
   max-width: 280px;
 }
 @media (max-width: 767px) {
@@ -3259,6 +3278,7 @@ button,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  stroke: #ffffff;
 }
 @media (max-width: 767px) {
   .general-button__icon-wrapper {
@@ -3267,8 +3287,98 @@ button,
   }
 }
 
-.general-button__icon {
+.general-button:hover .general-button__icon-wrapper {
+  background-color: #ffffff;
+  stroke: #316dc2;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.general-button:focus .general-button__icon-wrapper {
+  background-color: #ffffff;
+  stroke: #316dc2;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.general-button:focus-visible .general-button__icon-wrapper {
+  background-color: #ffffff;
+  stroke: #316dc2;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.general-button:active .general-button__icon-wrapper {
+  background-color: #ffffff;
+  stroke: rgba(49, 109, 194, 0.7);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.general-button--dark {
+  background-color: #316dc2;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+.general-button--dark:hover {
+  background-color: #ffffff;
+  color: #316dc2;
+}
+.general-button--dark:focus {
+  outline: none;
+  background-color: #ffffff;
+  color: #316dc2;
+}
+.general-button--dark:focus-visible {
+  outline: none;
+  background-color: #ffffff;
+  color: #316dc2;
+}
+.general-button--dark:active {
+  outline: none;
+  background-color: #ffffff;
+  color: rgba(49, 109, 194, 0.7);
+}
+
+.general-button--dark .general-button__icon-wrapper {
+  background-color: #ffffff;
+  stroke: #316dc2;
+}
+
+.general-button--dark:hover .general-button__icon-wrapper {
+  background-color: #316dc2;
   stroke: #ffffff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.general-button--dark:focus .general-button__icon-wrapper {
+  background-color: #316dc2;
+  stroke: #ffffff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.general-button--dark:focus-visible .general-button__icon-wrapper {
+  background-color: #316dc2;
+  stroke: #ffffff;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.general-button--dark:active .general-button__icon-wrapper {
+  background-color: #316dc2;
+  stroke: rgba(255, 255, 255, 0.7);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .main-header {
@@ -3760,14 +3870,27 @@ button,
   }
 }
 
-.main-footer__policy p {
+.main-footer__policy a {
   display: block;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid #484848;
 }
+.main-footer__policy a:hover {
+  color: #316dc2;
+  border-bottom: 1px solid #316dc2;
+}
+.main-footer__policy a:focus-visible {
+  color: #316dc2;
+  border-bottom: 1px solid #316dc2;
+  outline: none;
+}
+.main-footer__policy a:active {
+  color: rgb(39, 86, 153);
+  border-bottom: 1px solid rgb(39, 86, 153);
+}
 @media (max-width: 1199px) {
-  .main-footer__policy p {
+  .main-footer__policy a {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -3778,7 +3901,7 @@ button,
   }
 }
 @media (max-width: 767px) {
-  .main-footer__policy p {
+  .main-footer__policy a {
     margin: 0 auto;
     margin-bottom: 12px;
     max-width: 100%;
@@ -5143,6 +5266,37 @@ button,
           justify-content: center;
   stroke: #ffffff;
 }
+.programs__slider-button:hover {
+  background-color: #ffffff;
+  stroke: #316dc2;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.programs__slider-button:focus {
+  background-color: #ffffff;
+  stroke: #316dc2;
+  outline: none;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.programs__slider-button:focus-visible {
+  background-color: #ffffff;
+  stroke: #316dc2;
+  outline: none;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.programs__slider-button:active {
+  background-color: #ffffff;
+  stroke: rgba(49, 109, 194, 0.7);
+  outline: none;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
 
 .programs__interactives-wrapper {
   display: -webkit-box;
@@ -5629,11 +5783,15 @@ button,
   position: relative;
   min-height: 120px;
 }
-.faq__accordion-button:focus {
-  outline: none;
+.faq__accordion-button:hover {
+  background-color: #ffffff;
 }
 .faq__accordion-button:focus-visible {
   outline: none;
+  background-color: #ffffff;
+}
+.faq__accordion-button:active {
+  background-color: #ffffff;
 }
 @media (max-width: 1199px) {
   .faq__accordion-button {
@@ -5649,8 +5807,8 @@ button,
 }
 
 .faq__accordion-element.is-active .faq__accordion-button {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0s;
+  transition: 0s;
   padding-top: 41px;
   padding-bottom: 16px;
   min-height: 70px;
@@ -5667,6 +5825,84 @@ button,
     padding-bottom: 15px;
   }
 }
+.faq__accordion-element.is-active .faq__accordion-button:hover {
+  background-color: #316dc2;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  padding-left: 38px;
+  padding-right: 38px;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+@media (max-width: 1199px) {
+  .faq__accordion-element.is-active .faq__accordion-button:hover {
+    padding-top: 33px;
+    padding-bottom: 22px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+@media (max-width: 767px) {
+  .faq__accordion-element.is-active .faq__accordion-button:hover {
+    padding-top: 21px;
+    padding-bottom: 14px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+.faq__accordion-element.is-active .faq__accordion-button:focus-visible {
+  outline: none;
+  background-color: #316dc2;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  padding-left: 38px;
+  padding-right: 38px;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+@media (max-width: 1199px) {
+  .faq__accordion-element.is-active .faq__accordion-button:focus-visible {
+    padding-top: 33px;
+    padding-bottom: 22px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+@media (max-width: 767px) {
+  .faq__accordion-element.is-active .faq__accordion-button:focus-visible {
+    padding-top: 21px;
+    padding-bottom: 14px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+.faq__accordion-element.is-active .faq__accordion-button:active {
+  background-color: #275699;
+  border: none;
+  -webkit-transition: 0s;
+  transition: 0s;
+  padding-top: 41px;
+  padding-bottom: 16px;
+  padding-left: 39px;
+  padding-right: 39px;
+  border: 1px solid transparent;
+}
+@media (max-width: 1199px) {
+  .faq__accordion-element.is-active .faq__accordion-button:active {
+    padding-top: 34px;
+    padding-bottom: 23px;
+    padding-left: 29px;
+    padding-right: 29px;
+  }
+}
+@media (max-width: 767px) {
+  .faq__accordion-element.is-active .faq__accordion-button:active {
+    padding-top: 22px;
+    padding-bottom: 15px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
 
 .faq__accordion-button span {
   width: 40px;
@@ -5679,22 +5915,6 @@ button,
   position: absolute;
   right: 40px;
   top: 40px;
-}
-.faq__accordion-button span:disabled {
-  border: 1px solid rgba(28, 51, 116, 0.3);
-}
-.faq__accordion-button span:hover {
-  background-color: transparent;
-  border: 1px solid #316dc2;
-}
-.faq__accordion-button span:focus-visible {
-  outline: none;
-  background-color: transparent;
-  border: 1px solid #316dc2;
-}
-.faq__accordion-button span:active {
-  background-color: rgb(39, 86, 153);
-  border: 1px solid rgb(39, 86, 153);
 }
 .faq__accordion-button span::before {
   content: "";
@@ -5730,37 +5950,57 @@ button,
   }
 }
 
-.faq__accordion-button span:disabled:before {
+.faq__accordion-button:disabled span {
+  border: 1px solid rgba(28, 51, 116, 0.3);
+}
+
+.faq__accordion-button:hover span {
+  background-color: transparent;
+  border: 1px solid #316dc2;
+}
+
+.faq__accordion-button:focus-visible span {
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #316dc2;
+}
+
+.faq__accordion-button:active span {
+  background-color: rgb(39, 86, 153);
+  border: 1px solid rgb(39, 86, 153);
+}
+
+.faq__accordion-button:disabled span::before {
   opacity: 0.3;
 }
 
-.faq__accordion-button span:disabled::after {
+.faq__accordion-button:disabled span::after {
   opacity: 0.3;
 }
 
-.faq__accordion-button span:hover::before {
+.faq__accordion-button:hover span::before {
   background-color: #316dc2;
 }
 
-.faq__accordion-button span:hover::after {
+.faq__accordion-button:hover span::after {
   background-color: #316dc2;
 }
 
-.faq__accordion-button span:focus-visible::after {
+.faq__accordion-button:focus-visible span::after {
   outline: none;
   background-color: #316dc2;
 }
 
-.faq__accordion-button span:focus-visible:before {
+.faq__accordion-button:focus-visible span::before {
   outline: none;
   background-color: #316dc2;
 }
 
-.faq__accordion-button span:active:before {
+.faq__accordion-button:active span::before {
   background-color: #ffffff;
 }
 
-.faq__accordion-button span:active::after {
+.faq__accordion-button:active span::after {
   background-color: #ffffff;
 }
 
@@ -5771,27 +6011,27 @@ button,
   background-color: #316dc2;
 }
 
-.faq__accordion-element.is-active span:hover {
+.faq__accordion-element.is-active .faq__accordion-button:hover span {
   background-color: transparent;
   border: 1px solid #ffffff;
 }
-.faq__accordion-element.is-active span:hover::before {
+.faq__accordion-element.is-active .faq__accordion-button:hover span::before {
   background-color: #ffffff;
 }
 
-.faq__accordion-element.is-active span:focus-visible {
+.faq__accordion-element.is-active .faq__accordion-button:focus-visible span {
   background-color: transparent;
   border: 1px solid #ffffff;
 }
-.faq__accordion-element.is-active span:focus-visible::before {
+.faq__accordion-element.is-active .faq__accordion-button:focus-visible span::before {
   background-color: #ffffff;
 }
 
-.faq__accordion-element.is-active span:active {
+.faq__accordion-element.is-active .faq__accordion-button:active span {
   background-color: #ffffff;
   border: 1px solid #ffffff;
 }
-.faq__accordion-element.is-active span:active::before {
+.faq__accordion-element.is-active .faq__accordion-button:active span::before {
   background-color: #275699;
 }
 
@@ -5825,6 +6065,10 @@ button,
     line-height: 18px;
     max-width: 188px;
   }
+}
+
+.faq__accordion-button:active h3 {
+  color: #275699;
 }
 
 .faq__accordion-element.is-active h3 {
@@ -5864,6 +6108,69 @@ button,
   .faq__accordion-wrapper p {
     font-size: 14px;
     padding: 0 15px;
+  }
+}
+
+.faq__accordion-element.is-active:has(.faq__accordion-button:hover) {
+  border: 1px solid #ffffff;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+@media (max-width: 1199px) {
+  .faq__accordion-element.is-active:has(.faq__accordion-button:hover) {
+    padding-bottom: 25px;
+  }
+}
+@media (max-width: 767px) {
+  .faq__accordion-element.is-active:has(.faq__accordion-button:hover) {
+    padding-bottom: 15px;
+  }
+}
+.faq__accordion-element.is-active:has(.faq__accordion-button:hover) p {
+  padding-top: 1px;
+  padding-left: 39px;
+  padding-right: 39px;
+}
+@media (max-width: 1199px) {
+  .faq__accordion-element.is-active:has(.faq__accordion-button:hover) p {
+    padding: 1px 29px 0;
+  }
+}
+@media (max-width: 767px) {
+  .faq__accordion-element.is-active:has(.faq__accordion-button:hover) p {
+    padding: 1px 14px 0;
+  }
+}
+
+.faq__accordion-element.is-active:has(.faq__accordion-button:active) {
+  background-color: #275699;
+  border: none;
+  -webkit-transition: 0s;
+  transition: 0s;
+}
+@media (max-width: 1199px) {
+  .faq__accordion-element.is-active:has(.faq__accordion-button:active) {
+    padding-bottom: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .faq__accordion-element.is-active:has(.faq__accordion-button:active) {
+    padding-bottom: 15px;
+  }
+}
+.faq__accordion-element.is-active:has(.faq__accordion-button:active) p {
+  padding-top: 0px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+@media (max-width: 1199px) {
+  .faq__accordion-element.is-active:has(.faq__accordion-button:active) p {
+    padding: 0 30px 0;
+  }
+}
+@media (max-width: 767px) {
+  .faq__accordion-element.is-active:has(.faq__accordion-button:active) p {
+    padding: 0 15px 0;
   }
 }
 
@@ -6447,10 +6754,12 @@ button,
   }
 }
 
-.company-information__map-icon {
-  width: 40px;
-  height: 40px;
-  background-size: 40px 40px;
+@media (max-width: 1199px) {
+  .company-information__map-icon {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+  }
 }
 @media (max-width: 767px) {
   .company-information__map-icon {
@@ -6521,6 +6830,18 @@ button,
   background-color: #316dc2;
   border-radius: 16px;
 }
+@media (max-width: 1199px) {
+  .user-contacts__form {
+    max-width: 65.191740413%;
+    padding: 60px 45px 58px;
+  }
+}
+@media (max-width: 767px) {
+  .user-contacts__form {
+    max-width: 100%;
+    padding: 51px 15px 50px;
+  }
+}
 
 .user-contacts__form h2 {
   margin: 0;
@@ -6536,12 +6857,14 @@ button,
   .user-contacts__form h2 {
     font-size: 28px;
     line-height: 28px;
+    margin-bottom: 28px;
   }
 }
 @media (max-width: 767px) {
   .user-contacts__form h2 {
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 17px;
   }
 }
 
@@ -6552,6 +6875,18 @@ button,
   opacity: 0.9;
   line-height: 26px;
   margin-bottom: 19px;
+}
+@media (max-width: 1199px) {
+  .user-contacts__form p {
+    line-height: 20px;
+    margin-bottom: 31px;
+  }
+}
+@media (max-width: 767px) {
+  .user-contacts__form p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
 }
 
 .user-contacts__input {
@@ -6572,16 +6907,18 @@ button,
   font-weight: 400;
   line-height: 18px;
   position: relative;
-}
-.user-contacts__input:focus {
-  outline: none;
-}
-.user-contacts__input:focus-visible {
-  outline: none;
+  display: flex;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
 }
 @media (max-width: 1199px) {
   .user-contacts__input {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .user-contacts__input {
+    margin-bottom: 20px;
   }
 }
 
@@ -6590,8 +6927,7 @@ button,
   padding: 0;
   margin-bottom: 8px;
   display: block;
-  color: rgb(240, 239, 233);
-  opacity: 0.8;
+  color: rgba(240, 239, 233, 0.8);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -6606,7 +6942,8 @@ button,
 @media (max-width: 767px) {
   .user-contacts__input p {
     line-height: 14px;
-    margin-bottom: 7px;
+    margin-bottom: 12px;
+    font-size: 12px;
   }
 }
 
@@ -6664,64 +7001,42 @@ button,
 }
 @media (max-width: 767px) {
   .user-contacts__input input {
-    padding: 13px 25px;
+    padding: 16px 25px;
   }
 }
 
-.user-contacts__input:hover p {
+.user-contacts__input input:hover + p {
   color: rgb(240, 239, 233);
-  opacity: 1;
 }
-
-.user-contacts__input:focus p {
-  border: none;
-  outline: none;
+.user-contacts__input input:focus + p {
   color: rgb(240, 239, 233);
-  opacity: 1;
 }
-
-.user-contacts__input:focus-visible p {
-  border: none;
-  outline: none;
+.user-contacts__input input:focus-visible + p {
   color: rgb(240, 239, 233);
-  opacity: 1;
 }
-
-.user-contacts__input:active p {
-  border: none;
-  outline: none;
+.user-contacts__input input:active + p {
   color: rgb(240, 239, 233);
-  opacity: 1;
-}
-
-.user-contacts__input:disabled input {
-  border: 1px solid rgba(169, 175, 183, 0.5);
-  background: rgba(169, 175, 183, 0.2);
-}
-.user-contacts__input:hover input {
-  border: 1px solid rgb(255, 255, 255);
-  opacity: 1;
-}
-.user-contacts__input:focus input {
-  border: 1px solid rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
-  outline: none;
-  opacity: 1;
-}
-.user-contacts__input:focus-visible input {
-  border: 1px solid rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
-  outline: none;
-  opacity: 1;
-}
-.user-contacts__input:active input {
-  border: 1px solid rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
-  outline: none;
 }
 
 .user-contacts__textarea {
-  margin-bottom: 12px;
+  margin-bottom: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+@media (max-width: 1199px) {
+  .user-contacts__textarea {
+    margin-bottom: 17px;
+  }
+}
+@media (max-width: 767px) {
+  .user-contacts__textarea {
+    margin-bottom: 21px;
+  }
 }
 
 .user-contacts__textarea textarea {
@@ -6760,32 +7075,10 @@ button,
 @media (max-width: 767px) {
   .user-contacts__textarea textarea {
     padding: 13px 25px;
+    min-height: 94px;
+    min-width: unset;
+    width: 100%;
   }
-}
-
-.user-contacts__textarea:disabled textarea {
-  border: 1px solid rgba(169, 175, 183, 0.5);
-  background: rgba(169, 175, 183, 0.2);
-}
-.user-contacts__textarea:hover textarea {
-  border: 1px solid rgb(255, 255, 255);
-  opacity: 1;
-}
-.user-contacts__textarea:focus textarea {
-  border: 1px solid rgb(255, 255, 255);
-  outline: none;
-  opacity: 1;
-}
-.user-contacts__textarea:focus-visible textarea {
-  border: 1px solid rgb(255, 255, 255);
-  outline: none;
-  opacity: 1;
-}
-.user-contacts__textarea:active textarea {
-  border: 1px solid rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
-  outline: none;
-  opacity: 1;
 }
 
 .user-contacts__textarea p {
@@ -6793,8 +7086,7 @@ button,
   margin: 0;
   margin-bottom: 8px;
   display: block;
-  color: rgb(240, 239, 233);
-  opacity: 0.8;
+  color: rgba(240, 239, 233, 0.8);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -6809,35 +7101,39 @@ button,
 }
 @media (max-width: 767px) {
   .user-contacts__textarea p {
+    font-size: 12px;
     line-height: 14px;
+    margin-bottom: 12px;
   }
 }
 
-.user-contacts__textarea:disabled p {
+.user-contacts__textarea textarea:hover + p {
   color: rgb(240, 239, 233);
-  opacity: 1;
 }
-.user-contacts__textarea:hover p {
+.user-contacts__textarea textarea:focus + p {
   color: rgb(240, 239, 233);
-  opacity: 1;
 }
-.user-contacts__textarea:focus p {
+.user-contacts__textarea textarea:focus + p {
   color: rgb(240, 239, 233);
-  opacity: 1;
 }
-.user-contacts__textarea:focus-visible p {
+.user-contacts__textarea textarea:focus-visible + p {
   color: rgb(240, 239, 233);
-  opacity: 1;
 }
-.user-contacts__textarea:active p {
+.user-contacts__textarea textarea:active + p {
   color: rgb(240, 239, 233);
-  opacity: 1;
 }
 
 .user-contacts__select {
   margin: 0;
   padding: 0 0 12px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .is-open .company-modal__button-select {
@@ -6869,8 +7165,7 @@ button,
   margin: 0;
   margin-bottom: 10px;
   display: block;
-  color: #ffffff;
-  opacity: 0.8;
+  color: rgba(240, 239, 233, 0.8);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -6886,6 +7181,8 @@ button,
 @media (max-width: 767px) {
   .user-contacts__select p {
     line-height: 14px;
+    font-size: 12px;
+    margin-bottom: 11px;
   }
 }
 
@@ -6901,17 +7198,36 @@ button,
 }
 @media (max-width: 767px) {
   .user-contacts__button-select {
-    min-height: 44px;
+    min-height: 50px;
   }
 }
 .user-contacts__button-select:hover {
-  border: 1px solid #484848;
+  border: 1px solid #ffffff;
 }
 .user-contacts__button-select:focus {
-  border: 1px solid #484848;
+  border: 1px solid #ffffff;
 }
 .user-contacts__button-select:focus-visible {
-  border: 1px solid #484848;
+  border: 1px solid #ffffff;
+}
+.user-contacts__button-select:active {
+  border: 1px solid #ffffff;
+}
+
+.user-contacts__button-select:hover + p {
+  color: rgb(240, 239, 233);
+}
+.user-contacts__button-select:focus + p {
+  color: rgb(240, 239, 233);
+}
+.user-contacts__button-select:focus + p {
+  color: rgb(240, 239, 233);
+}
+.user-contacts__button-select:focus-visible + p {
+  color: rgb(240, 239, 233);
+}
+.user-contacts__button-select:active + p {
+  color: rgb(240, 239, 233);
 }
 
 .user-contacts__select-icon {
@@ -6934,8 +7250,8 @@ button,
 }
 @media (max-width: 767px) {
   .user-contacts__checkbox:last-of-type {
-    margin-top: -6px;
-    margin-bottom: 7px;
+    margin-top: 0;
+    margin-bottom: 12px;
   }
 }
 
@@ -6964,15 +7280,34 @@ button,
     top: 12px;
   }
 }
+.custom-toggle--checkbox .user-contacts__toggle-icon:hover, .custom-toggle--radio .user-contacts__toggle-icon:hover {
+  border: 1px solid rgb(255, 255, 255);
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+  outline: none;
+}
+.custom-toggle--checkbox .user-contacts__toggle-icon:focus, .custom-toggle--radio .user-contacts__toggle-icon:focus {
+  border: 1px solid rgb(255, 255, 255);
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+  outline: none;
+}
+.custom-toggle--checkbox .user-contacts__toggle-icon:focus-visible, .custom-toggle--radio .user-contacts__toggle-icon:focus-visible {
+  border: 1px solid rgb(255, 255, 255);
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+  outline: none;
+}
+.custom-toggle--checkbox .user-contacts__toggle-icon:active, .custom-toggle--radio .user-contacts__toggle-icon:active {
+  border: 1px solid rgb(255, 255, 255);
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+  outline: none;
+}
 
 .custom-toggle--checkbox .user-contacts__toggle-icon::before, .custom-toggle--radio .user-contacts__toggle-icon::before {
   width: 10px;
   height: 10px;
-}
-
-.custom-toggle input:checked + .user-contacts__toggle-icon {
-  border: 1px solid #ffffff;
-  background-color: #ffffff;
 }
 
 .custom-toggle input:checked + .user-contacts__toggle-icon::before {
@@ -6984,6 +7319,29 @@ button,
   background-size: 10px 10px;
 }
 
+.custom-toggle input:checked + .user-contacts__toggle-icon {
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+}
+.custom-toggle input:checked + .user-contacts__toggle-icon:hover {
+  background-color: transparent;
+}
+.custom-toggle input:checked + .user-contacts__toggle-icon:hover::before {
+  background-image: url("../img/svg/tick-white.svg");
+}
+.custom-toggle input:checked + .user-contacts__toggle-icon:focus {
+  background-color: transparent;
+}
+.custom-toggle input:checked + .user-contacts__toggle-icon:focus::before {
+  background-image: url("../img/svg/tick-white.svg");
+}
+.custom-toggle input:checked + .user-contacts__toggle-icon:focus-visible {
+  background-color: transparent;
+}
+.custom-toggle input:checked + .user-contacts__toggle-icon:focus-visible::before {
+  background-image: url("../img/svg/tick-white.svg");
+}
+
 .is-invalid.custom-toggle--checkbox .user-contacts__toggle-icon, .custom-toggle--radio .user-contacts__toggle-icon {
   border: 1px solid #FF5E66;
   opacity: 0.7;
@@ -6993,9 +7351,6 @@ button,
 .user-contacts__button {
   width: 100%;
   margin: 0 auto;
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  color: #ffffff;
 }
 @media (max-width: 767px) {
   .user-contacts__button {
@@ -7003,22 +7358,8 @@ button,
   }
 }
 
-.user-contacts__button span {
-  color: #ffffff;
-}
-
-.user-contacts__icon-wrapper {
-  background-color: #ffffff;
-  stroke: #316dc2;
-}
-
-.user-contacts__icon {
-  stroke: #316dc2;
-}
-
 .user-contacts__select-text {
-  color: #484848;
-  font-family: Manrope;
+  color: rgb(240, 239, 233);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

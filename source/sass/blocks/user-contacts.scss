@@ -53,6 +53,16 @@
   max-width: 498px;
   background-color: $color-light-blue;
   border-radius: 16px;
+
+  @include vp-1199 {
+    max-width: 65.19174041297935%;
+    padding: 60px 45px 58px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    padding: 51px 15px 50px;
+  }
 }
 
 .user-contacts__form h2 {
@@ -68,11 +78,13 @@
   @include vp-1199 {
     font-size: 28px;
     line-height: 28px;
+    margin-bottom: 28px;
   }
 
   @include vp-767 {
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 17px;
   }
 }
 
@@ -83,6 +95,16 @@
   opacity: 0.9;
   line-height: 26px;
   margin-bottom: 19px;
+
+  @include vp-1199 {
+    line-height: 20px;
+    margin-bottom: 31px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
 }
 
 .user-contacts__input {
@@ -98,17 +120,15 @@
   font-weight: 400;
   line-height: 18px;
   position: relative;
-
-  &:focus {
-    outline: none;
-  }
-
-  &:focus-visible {
-    outline: none;
-  }
+  display: flex;
+  flex-direction: column-reverse;
 
   @include vp-1199 {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
   }
 }
 
@@ -117,8 +137,7 @@
   padding: 0;
   margin-bottom: 8px;
   display: block;
-  color: rgba(240, 239, 233, 1);
-  opacity: 0.8;
+  color: rgba(240, 239, 233, 0.8);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -131,7 +150,8 @@
 
   @include vp-767 {
     line-height: 14px;
-    margin-bottom: 7px;
+    margin-bottom: 12px;
+    font-size: 12px;;
   }
 }
 
@@ -177,70 +197,40 @@
   }
 
   @include vp-767 {
-    padding: 13px 25px;
+    padding: 16px 25px;
   }
 }
 
-.user-contacts__input:hover p{
-  color: rgba(240, 239, 233, 1);
-  opacity: 1;
-}
-
-.user-contacts__input:focus p{
-  border: none;
-  outline: none;
-  color: rgba(240, 239, 233, 1);
-  opacity: 1;
-}
-
-.user-contacts__input:focus-visible p{
-  border: none;
-  outline: none;
-  color: rgba(240, 239, 233, 1);
-  opacity: 1;
-}
-
-.user-contacts__input:active p{
-  border: none;
-  outline: none;
-  color: rgba(240, 239, 233, 1);
-  opacity: 1;
-}
-
-.user-contacts__input {
-  &:disabled input {
-    border: 1px solid rgba(169, 175, 183, 0.50);
-    background: rgba(169, 175, 183, 0.20);
+.user-contacts__input input {
+  &:hover + p {
+    color: rgba(240, 239, 233, 1);
   }
 
-  &:hover input {
-    border: 1px solid rgba(255, 255, 255, 1);
-    opacity: 1;
+  &:focus + p {
+    color: rgba(240, 239, 233, 1);
   }
 
-  &:focus input {
-    border: 1px solid rgba(255, 255, 255, 1);
-    color: rgba(255, 255, 255, 1);
-    outline: none;
-    opacity: 1;
+  &:focus-visible + p {
+    color: rgba(240, 239, 233, 1);
   }
 
-  &:focus-visible input {
-    border: 1px solid rgba(255, 255, 255, 1);
-    color: rgba(255, 255, 255, 1);
-    outline: none;
-    opacity: 1;
-  }
-
-  &:active input {
-    border: 1px solid rgba(255, 255, 255, 1);
-    color: rgba(255, 255, 255, 1);
-    outline: none;
+  &:active + p {
+    color: rgba(240, 239, 233, 1);
   }
 }
 
 .user-contacts__textarea {
-  margin-bottom: 12px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include vp-1199 {
+    margin-bottom: 17px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 21px;
+  }
 }
 
 .user-contacts__textarea textarea {
@@ -283,37 +273,9 @@
 
   @include vp-767 {
     padding: 13px 25px;
-  }
-}
-
-.user-contacts__textarea {
-  &:disabled textarea {
-    border: 1px solid rgba(169, 175, 183, 0.50);
-    background: rgba(169, 175, 183, 0.20);
-  }
-
-  &:hover textarea {
-    border: 1px solid rgba(255, 255, 255, 1);
-    opacity: 1;
-  }
-
-  &:focus textarea {
-    border: 1px solid rgba(255, 255, 255, 1);
-    outline: none;
-    opacity: 1;
-  }
-
-  &:focus-visible textarea {
-    border: 1px solid rgba(255, 255, 255, 1);
-    outline: none;
-    opacity: 1;
-  }
-
-  &:active textarea {
-    border: 1px solid rgba(255, 255, 255, 1);
-    color: rgba(255, 255, 255, 1);
-    outline: none;
-    opacity: 1;
+    min-height: 94px;
+    min-width: unset;
+    width: 100%;
   }
 }
 
@@ -322,8 +284,7 @@
   margin: 0;
   margin-bottom: 8px;
   display: block;
-  color: rgba(240, 239, 233, 1);
-  opacity: 0.8;
+  color: rgba(240, 239, 233, 0.8);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -336,34 +297,31 @@
   }
 
   @include vp-767 {
+    font-size: 12px;
     line-height: 14px;
+    margin-bottom: 12px;
   }
 }
 
-.user-contacts__textarea {
-  &:disabled  p {
+.user-contacts__textarea textarea {
+  &:hover + p {
     color: rgba(240, 239, 233, 1);
-    opacity: 1;
   }
 
-  &:hover p {
+  &:focus + p {
     color: rgba(240, 239, 233, 1);
-    opacity: 1;
   }
 
-  &:focus p {
+  &:focus + p {
     color: rgba(240, 239, 233, 1);
-    opacity: 1;
   }
 
-  &:focus-visible p {
+  &:focus-visible + p {
     color: rgba(240, 239, 233, 1);
-    opacity: 1;
   }
 
-  &:active p {
+  &:active + p {
     color: rgba(240, 239, 233, 1);
-    opacity: 1;
   }
 }
 
@@ -371,6 +329,8 @@
   margin: 0;
   padding: 0 0 12px;
   width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .is-open .company-modal__button-select {
@@ -402,8 +362,7 @@
   margin: 0;
   margin-bottom: 10px;
   display: block;
-  color: $color-default-white;
-  opacity: 0.8;
+  color: rgba(240, 239, 233, 0.8);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -417,6 +376,8 @@
 
   @include vp-767 {
     line-height: 14px;
+    font-size: 12px;
+    margin-bottom: 11px;
   }
 }
 
@@ -431,19 +392,45 @@
   line-height: 14px;
 
   @include vp-767 {
-    min-height: 44px;
+    min-height: 50px;
   }
 
   &:hover {
-    border: 1px solid $color-dark-brown;
+    border: 1px solid $color-default-white;
   }
 
   &:focus {
-    border: 1px solid $color-dark-brown;
+    border: 1px solid $color-default-white;
   }
 
   &:focus-visible {
-    border: 1px solid $color-dark-brown;
+    border: 1px solid $color-default-white;
+  }
+
+  &:active {
+    border: 1px solid $color-default-white;
+  }
+}
+
+.user-contacts__button-select {
+  &:hover + p {
+    color: rgba(240, 239, 233, 1);
+  }
+
+  &:focus + p {
+    color: rgba(240, 239, 233, 1);
+  }
+
+  &:focus  + p {
+    color: rgba(240, 239, 233, 1);
+  }
+
+  &:focus-visible  + p{
+    color: rgba(240, 239, 233, 1);
+  }
+
+  &:active + p {
+    color: rgba(240, 239, 233, 1);
   }
 }
 
@@ -466,8 +453,8 @@
   margin-bottom: 39px;
 
   @include vp-767 {
-    margin-top: -6px;
-    margin-bottom: 7px;
+    margin-top: 0;
+    margin-bottom: 12px;
   }
 }
 
@@ -494,16 +481,35 @@
   @include vp-767 {
     top: 12px;
   }
+
+  &:hover {
+    border: 1px solid rgba(255, 255, 255, 1);
+    transition: 0.1s ease;
+    outline: none;
+  }
+
+  &:focus {
+    border: 1px solid rgba(255, 255, 255, 1);
+    transition: 0.1s ease;
+    outline: none;
+  }
+
+  &:focus-visible {
+    border: 1px solid rgba(255, 255, 255, 1);
+    transition: 0.1s ease;
+    outline: none;
+  }
+
+  &:active {
+    border: 1px solid rgba(255, 255, 255, 1);
+    transition: 0.1s ease;
+    outline: none;
+  }
 }
 
 .custom-toggle--checkbox .user-contacts__toggle-icon::before, .custom-toggle--radio .user-contacts__toggle-icon::before {
   width: 10px;
   height: 10px;
-}
-
-.custom-toggle input:checked+.user-contacts__toggle-icon {
-  border: 1px solid $color-default-white;
-  background-color: $color-default-white;
 }
 
 .custom-toggle input:checked+.user-contacts__toggle-icon::before  {
@@ -515,6 +521,35 @@
   background-size: 10px 10px;
 }
 
+.custom-toggle input:checked+.user-contacts__toggle-icon {
+  border: 1px solid $color-default-white;
+  background-color: $color-default-white;
+
+  &:hover {
+    background-color: transparent;
+
+    &::before {
+      background-image: url('../img/svg/tick-white.svg');
+    }
+  }
+
+  &:focus {
+    background-color: transparent;
+
+    &::before {
+      background-image: url('../img/svg/tick-white.svg');
+    }
+  }
+
+  &:focus-visible {
+    background-color: transparent;
+
+    &::before {
+      background-image: url('../img/svg/tick-white.svg');
+    }
+  }
+}
+
 .is-invalid.custom-toggle--checkbox .user-contacts__toggle-icon, .custom-toggle--radio .user-contacts__toggle-icon {
   border: 1px solid #FF5E66;
   opacity: 0.7;
@@ -524,31 +559,14 @@
 .user-contacts__button {
   width: 100%;
   margin: 0 auto;
-  background-color: transparent;
-  border: 1px solid $color-default-white;
-  color: $color-default-white;
 
   @include vp-767 {
     width: 100%;
   }
 }
 
-.user-contacts__button span {
-  color: $color-default-white;
-}
-
-.user-contacts__icon-wrapper {
-  background-color: $color-default-white;
-  stroke: $color-light-blue;
-}
-
-.user-contacts__icon {
-  stroke: $color-light-blue;
-}
-
 .user-contacts__select-text {
-  color: $color-dark-brown;
-  font-family: Manrope;
+  color: rgba(240, 239, 233, 1);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

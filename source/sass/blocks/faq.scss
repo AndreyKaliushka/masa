@@ -97,13 +97,17 @@
   position: relative;
   min-height: 120px;
 
-
-  &:focus {
-    outline: none;
+  &:hover {
+    background-color: $color-default-white;
   }
 
   &:focus-visible {
     outline: none;
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    background-color: $color-default-white;
   }
 
   @include vp-1199 {
@@ -118,7 +122,7 @@
 }
 
 .faq__accordion-element.is-active .faq__accordion-button {
-  transition: .3s;
+  transition: 0s;
   padding-top: 41px;
   padding-bottom: 16px;
   min-height: 70px;
@@ -131,6 +135,78 @@
   @include vp-767 {
     padding-top: 22px;
     padding-bottom: 15px;
+  }
+
+  &:hover {
+    background-color: $color-light-blue;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    padding-left: 38px;
+    padding-right: 38px;
+    transition: 0s;
+
+    @include vp-1199 {
+      padding-top: 33px;
+      padding-bottom: 22px;
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+
+    @include vp-767 {
+      padding-top: 21px;
+      padding-bottom: 14px;
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $color-light-blue;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    padding-left: 38px;
+    padding-right: 38px;
+    transition: 0s;
+
+    @include vp-1199 {
+      padding-top: 33px;
+      padding-bottom: 22px;
+      padding-left: 28px;
+      padding-right: 28px;
+    }
+
+    @include vp-767 {
+      padding-top: 21px;
+      padding-bottom: 14px;
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+  }
+
+  &:active {
+    background-color: #275699;
+    border: none;
+    transition: 0s;
+    padding-top: 41px;
+    padding-bottom: 16px;
+    padding-left: 39px;
+    padding-right: 39px;
+    border: 1px solid transparent;
+
+    @include vp-1199 {
+      padding-top: 34px;
+      padding-bottom: 23px;
+      padding-left: 29px;
+      padding-right: 29px;
+    }
+
+    @include vp-767 {
+      padding-top: 22px;
+      padding-bottom: 15px;
+      padding-left: 14px;
+      padding-right: 14px;
+    }
   }
 }
 
@@ -145,26 +221,6 @@
   position: absolute;
   right: 40px;
   top: 40px;
-
-  &:disabled {
-    border: 1px solid rgba(28, 51, 116, 0.3);
-  }
-
-  &:hover {
-    background-color: transparent;
-    border: 1px solid $color-light-blue;
-  }
-
-  &:focus-visible {
-    outline: none;
-    background-color: transparent;
-    border: 1px solid $color-light-blue;
-  }
-
-  &:active {
-    background-color: rgba(39, 86, 153, 1);
-    border: 1px solid rgba(39, 86, 153, 1);
-  }
 
   &::before {
     content: "";
@@ -198,37 +254,57 @@
   }
 }
 
-.faq__accordion-button span:disabled:before {
+.faq__accordion-button:disabled span {
+  border: 1px solid rgba(28, 51, 116, 0.3);
+}
+
+.faq__accordion-button:hover span {
+  background-color: transparent;
+  border: 1px solid $color-light-blue;
+}
+
+.faq__accordion-button:focus-visible span {
+  outline: none;
+  background-color: transparent;
+  border: 1px solid $color-light-blue;
+}
+
+.faq__accordion-button:active span {
+  background-color: rgba(39, 86, 153, 1);
+  border: 1px solid rgba(39, 86, 153, 1);
+}
+
+.faq__accordion-button:disabled span::before {
   opacity: 0.3;
 }
 
-.faq__accordion-button span:disabled::after {
+.faq__accordion-button:disabled span::after {
   opacity: 0.3;
 }
 
-.faq__accordion-button span:hover::before {
+.faq__accordion-button:hover span::before {
   background-color: $color-light-blue;
 }
 
-.faq__accordion-button span:hover::after {
+.faq__accordion-button:hover span::after {
   background-color: $color-light-blue;
 }
 
-.faq__accordion-button span:focus-visible::after {
+.faq__accordion-button:focus-visible span::after {
   outline: none;
   background-color: $color-light-blue;
 }
 
-.faq__accordion-button span:focus-visible:before {
+.faq__accordion-button:focus-visible span::before {
   outline: none;
   background-color: $color-light-blue;
 }
 
-.faq__accordion-button span:active:before {
+.faq__accordion-button:active span::before {
   background-color: $color-default-white;
 }
 
-.faq__accordion-button span:active::after {
+.faq__accordion-button:active span::after {
   background-color: $color-default-white;
 }
 
@@ -240,7 +316,7 @@
   }
 }
 
-.faq__accordion-element.is-active span:hover {
+.faq__accordion-element.is-active .faq__accordion-button:hover span {
   background-color: transparent;
   border: 1px solid $color-default-white;
 
@@ -250,7 +326,7 @@
   }
 }
 
-.faq__accordion-element.is-active span:focus-visible {
+.faq__accordion-element.is-active .faq__accordion-button:focus-visible span {
   background-color: transparent;
   border: 1px solid $color-default-white;
 
@@ -260,7 +336,7 @@
   }
 }
 
-.faq__accordion-element.is-active span:active {
+.faq__accordion-element.is-active .faq__accordion-button:active span {
   background-color: $color-default-white;
   border: 1px solid $color-default-white;
 
@@ -297,6 +373,10 @@
     line-height: 18px;
     max-width: 188px;
   }
+}
+
+.faq__accordion-button:active h3 {
+  color: #275699;
 }
 
 .faq__accordion-element.is-active h3 {
@@ -343,3 +423,57 @@
   }
 }
 
+.faq__accordion-element.is-active:has(.faq__accordion-button:hover) {
+  border: 1px solid $color-default-white;
+  transition: 0s;
+
+  @include vp-1199 {
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 15px;
+  }
+
+  & p {
+    padding-top: 1px;
+    padding-left: 39px;
+    padding-right: 39px;
+
+    @include vp-1199 {
+      padding: 1px 29px 0;
+    }
+
+    @include vp-767 {
+      padding: 1px 14px 0;
+    }
+  }
+}
+
+.faq__accordion-element.is-active:has(.faq__accordion-button:active) {
+  background-color: #275699;
+  border: none;
+  transition: 0s;
+
+  @include vp-1199 {
+    padding-bottom: 26px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 15px;
+  }
+
+  & p {
+    padding-top: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    @include vp-1199 {
+      padding: 0 30px 0;
+    }
+
+    @include vp-767 {
+      padding: 0 15px 0;
+    }
+  }
+}

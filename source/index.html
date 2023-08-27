@@ -499,9 +499,9 @@
 
             <div class="accordion faq__accordion" data-accordion="parent" data-single="data-single">
               <div class="accordion__element faq__accordion-element" data-accordion="element">
-                <button class="accordion__button faq__accordion-button btn" type="button" data-accordion="button" tabindex="-1">
+                <button class="accordion__button faq__accordion-button btn" type="button" data-accordion="button">
                   <h3>Кто организатор? Какие сроки у программы?</h3>
-                  <span tabindex="0"></span>
+                  <span></span>
                 </button>
                 <div class="accordion__content faq__accordion-content" data-accordion="content">
                   <div class="accordion__wrapper faq__accordion-wrapper">
@@ -516,9 +516,9 @@
 
             <div class="accordion faq__accordion" data-accordion="parent" data-single="data-single">
               <div class="accordion__element faq__accordion-element" data-accordion="element">
-                <button class="accordion__button faq__accordion-button btn" type="button" data-accordion="button" tabindex="-1">
+                <button class="accordion__button faq__accordion-button btn" type="button" data-accordion="button">
                   <h3>Что такое грант на&nbsp;обучение?</h3>
-                  <span tabindex="0"></span>
+                  <span></span>
                 </button>
                 <div class="accordion__content faq__accordion-content" data-accordion="content">
                   <div class="accordion__wrapper faq__accordion-wrapper">
@@ -530,9 +530,9 @@
 
             <div class="accordion faq__accordion" data-accordion="parent" data-single="data-single">
               <div class="accordion__element faq__accordion-element" data-accordion="element">
-                <button class="accordion__button faq__accordion-button btn" type="button" data-accordion="button" tabindex="-1">
+                <button class="accordion__button faq__accordion-button btn" type="button" data-accordion="button">
                   <h3>Как определяется стоимость программы?</h3>
-                  <span tabindex="0"></span>
+                  <span></span>
                 </button>
                 <div class="accordion__content faq__accordion-content" data-accordion="content">
                   <div class="accordion__wrapper faq__accordion-wrapper">
@@ -546,9 +546,9 @@
 
             <div class="accordion faq__accordion" data-accordion="parent" data-single="data-single">
               <div class="accordion__element faq__accordion-element" data-accordion="element">
-                <button class="accordion__button faq__accordion-button btn" type="button" data-accordion="button" tabindex="-1">
+                <button class="accordion__button faq__accordion-button btn" type="button" data-accordion="button">
                   <h3>Признаётся&nbsp;ли учеба в&nbsp;рамках проекта  <br> для дальнейшего обучения?</h3>
-                  <span tabindex="0"></span>
+                  <span></span>
                 </button>
                 <div class="accordion__content faq__accordion-content" data-accordion="content">
                   <div class="accordion__wrapper faq__accordion-wrapper">
@@ -563,9 +563,9 @@
 
             <div class="accordion faq__accordion" data-accordion="parent" data-single="data-single">
               <div class="accordion__element faq__accordion-element" data-accordion="element">
-                <button class="accordion__button faq__accordion-button btn" type="button" data-accordion="button" tabindex="-1">
+                <button class="accordion__button faq__accordion-button btn" type="button" data-accordion="button">
                   <h3>Как выглядит полный процесс регистрации <br> на&nbsp;программу &laquo;Маса&raquo;?</h3>
-                  <span tabindex="0"></span>
+                  <span></span>
                 </button>
                 <div class="accordion__content faq__accordion-content" data-accordion="content">
                   <div class="accordion__wrapper faq__accordion-wrapper">
@@ -786,26 +786,26 @@
                 <form method="post" action="https://echo.htmlacademy.ru/">
                   <div class="user-contacts__form-wrapper">
                     <div class="custom-input user-contacts__input" data-validate-type="text" data-limitation="name" data-required="data-required">
-                      <p>Имя</p>
                       <input type="text" name="user-name-1" placeholder="" aria-label="Введите ваше имя."/>
+                      <p>Имя</p>
                     </div>
 
                     <div class="custom-input user-contacts__input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-required="data-required">
-                      <p>Телефон</p>
                       <input type="tel" name="user-phone" placeholder="" aria-label="Введите ваш телефон."/>
+                      <p>Телефон</p>
                     </div>
 
                     <div class="auto-resize-textarea user-contacts__textarea">
-                      <p>Ваше сообщение</p>
                       <textarea name="example" rows="2" aria-label="textarea"></textarea>
+                      <p>Ваше сообщение</p>
                     </div>
 
                     <div class="custom-select user-contacts__select" data-select data-validate-type="select" data-name="some-name" data-id="id-example-2" data-required="true">
-                      <p>Выберите город</p>
                       <button class="custom-select__button user-contacts__button-select" type="button" aria-label="Выберите одну из опций">
                         <span class="custom-select__text user-contacts__select-text"></span>
                         <span class="custom-select__icon user-contacts__select-icon"></span>
                       </button>
+                      <p>Выберите город</p>
                       <ul class="custom-select__list user-contacts__select-list" role="listbox">
                         <li class="custom-select__item user-contacts__select-item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
                         <li class="custom-select__item user-contacts__select-item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Москва</li>
@@ -818,14 +818,14 @@
 
                     <div class="custom-toggle custom-toggle--checkbox user-contacts__checkbox" data-validate-type="checkbox" data-message-base="">
                       <label>
-                        <input type="checkbox" value="user-agreement-1" name="user-agreement"/>
-                        <span class="custom-toggle__icon user-contacts__toggle-icon">
+                        <input type="checkbox" value="user-agreement-1" name="user-agreement" tabindex="-1"/>
+                        <span class="custom-toggle__icon user-contacts__toggle-icon" tabindex="0">
                         </span>
                         <span class="custom-toggle__label user-contacts__checkbox-label">Я согласен на обработку моих персональных данных</span>
                       </label>
                     </div>
 
-                    <button class="user-contacts__button general-button">
+                    <button class="user-contacts__button general-button general-button--dark">
                       <span>отправить</span>
                       <div class="user-contacts__icon-wrapper general-button__icon-wrapper">
                         <svg class="user-contacts__icon general-button__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -901,7 +901,7 @@
 
           <div class="main-footer__policy">
             <span>Masa © 2023 Все права защищены</span>
-            <p>Политика конфиденциальности</p>
+            <a href="#">Политика конфиденциальности</a>
           </div>
         </div>
       </footer>

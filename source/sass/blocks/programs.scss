@@ -288,6 +288,33 @@
   align-items: center;
   justify-content: center;
   stroke: $color-default-white;
+
+  &:hover {
+    background-color: $color-default-white;
+    stroke: $color-light-blue;
+    transform: rotate(45deg);
+  }
+
+  &:focus {
+    background-color: $color-default-white;
+    stroke: $color-light-blue;
+    outline: none;
+    transform: rotate(45deg);
+  }
+
+  &:focus-visible {
+    background-color: $color-default-white;
+    stroke: $color-light-blue;
+    outline: none;
+    transform: rotate(45deg);
+  }
+
+  &:active {
+    background-color: $color-default-white;
+    stroke: rgba(49, 109, 194, 0.7);
+    outline: none;
+    transform: rotate(45deg);
+  }
 }
 
 .programs__interactives-wrapper {

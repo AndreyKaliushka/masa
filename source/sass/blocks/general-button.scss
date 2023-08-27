@@ -9,6 +9,30 @@
   word-break: break-all;
   user-select: none;
   cursor: pointer;
+  color: $color-light-blue;
+
+  &:hover {
+    background-color: $color-light-blue;
+    color: $color-default-white;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $color-light-blue;
+    color: $color-default-white;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $color-light-blue;
+    color: $color-default-white;
+  }
+
+  &:active {
+    outline: none;
+    background-color: $color-light-blue;
+    color: rgba(255, 255, 255, 0.7);
+  }
 
   @include vp-767 {
     padding: 3px 3px 3px 19px;
@@ -26,7 +50,6 @@
   line-height: 14px;
   letter-spacing: 0.28px;
   text-transform: uppercase;
-  color: $color-light-blue;
   max-width: 280px;
 
   @include vp-767 {
@@ -44,6 +67,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  stroke: $color-default-white;
 
   @include vp-767 {
     width: 34px;
@@ -51,6 +75,85 @@
   }
 }
 
-.general-button__icon {
+.general-button:hover .general-button__icon-wrapper {
+  background-color: $color-default-white;
+  stroke: $color-light-blue;
+  transform: rotate(45deg);
+}
+
+.general-button:focus .general-button__icon-wrapper {
+  background-color: $color-default-white;
+  stroke: $color-light-blue;
+  transform: rotate(45deg);
+}
+
+.general-button:focus-visible .general-button__icon-wrapper {
+  background-color: $color-default-white;
+  stroke: $color-light-blue;
+  transform: rotate(45deg);
+}
+
+.general-button:active .general-button__icon-wrapper {
+  background-color: $color-default-white;
+  stroke: rgba(49, 109, 194, 0.7);
+  transform: rotate(45deg);
+}
+
+.general-button--dark {
+  background-color: $color-light-blue;
+  border: 1px solid $color-default-white;
+  color: $color-default-white;
+
+
+  &:hover {
+    background-color: $color-default-white;
+    color: $color-light-blue;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $color-default-white;
+    color: $color-light-blue;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: $color-default-white;
+    color: $color-light-blue;
+  }
+
+  &:active {
+    outline: none;
+    background-color: $color-default-white;
+    color: rgba(49, 109, 194, 0.7);
+  }
+}
+
+.general-button--dark .general-button__icon-wrapper {
+  background-color: $color-default-white;
+  stroke: $color-light-blue;
+}
+
+.general-button--dark:hover .general-button__icon-wrapper {
+  background-color: $color-light-blue;
   stroke: $color-default-white;
+  transform: rotate(45deg);
+}
+
+.general-button--dark:focus .general-button__icon-wrapper {
+  background-color: $color-light-blue;
+  stroke: $color-default-white;
+  transform: rotate(45deg);
+}
+
+.general-button--dark:focus-visible .general-button__icon-wrapper {
+  background-color: $color-light-blue;
+  stroke: $color-default-white;
+  transform: rotate(45deg);
+}
+
+.general-button--dark:active .general-button__icon-wrapper {
+  background-color: $color-light-blue;
+  stroke: rgba(255, 255, 255, 0.7);
+  transform: rotate(45deg);
 }

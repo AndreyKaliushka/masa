@@ -92,11 +92,27 @@
   }
 }
 
-.main-footer__policy p {
+.main-footer__policy a {
   display: block;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid $color-dark-brown;
+
+  &:hover {
+    color: $color-light-blue;
+    border-bottom: 1px solid $color-light-blue;
+  }
+
+  &:focus-visible {
+    color: $color-light-blue;
+    border-bottom: 1px solid $color-light-blue;
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(39, 86, 153, 1);
+    border-bottom: 1px solid rgba(39, 86, 153, 1);
+  }
 
   @include vp-1199 {
     order: 1;

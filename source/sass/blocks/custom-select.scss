@@ -17,7 +17,7 @@
 
     transform: translateY(-50%);
 
-    transition: transform 0.3s ease, opacity  0.3s ease;
+    transition: transform 0.1s ease, opacity  0.1s ease;
 
     pointer-events: none;
 
@@ -33,7 +33,7 @@
 
     transform: translateY(-50%);
 
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.1s ease, opacity 0.1s ease;
 
     pointer-events: none;
 
@@ -72,7 +72,7 @@
     outline: none;
     cursor: pointer;
 
-    transition: border 0.3s ease;
+    transition: border 0.1s ease;
 
     &:hover {
       border: 2px solid rgba(0, 0, 0, 0.5);
@@ -107,7 +107,7 @@
     visibility: hidden;
     opacity: 0;
 
-    transition: visibility 0.3s ease, opacity 0.3s ease;
+    transition: visibility 0.1s ease, opacity 0.1s ease;
   }
 
   &__item {
@@ -116,7 +116,7 @@
     outline: none;
     cursor: pointer;
 
-    transition: background-color 0.3s ease;
+    transition: background-color 0.1s ease;
 
     &[aria-selected="true"] {
       background-color: $color-default-white;
@@ -187,7 +187,7 @@
 
     background-color: #000000;
 
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
 
     clip-path: polygon(100% 0, 100% 20%, 50% 100%, 0 20%, 0 0, 50% 80%);
   }
