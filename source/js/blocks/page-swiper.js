@@ -1,5 +1,6 @@
 import Swiper from '../vendor/swiper';
 
+
 const setHeroSwiper = () => {
   if (document.body.contains(document.querySelector('.hero__swiper-wrapper'))) {
     // eslint-disable-next-line no-new
@@ -108,4 +109,52 @@ const setReviewsSwiper = () => {
 
 };
 
-export {setHeroSwiper, setProgramsSwiper, setReviewsSwiper};
+const setNewsSwiper = () => {
+  if (document.body.contains(document.querySelector('.news__swiper-wrapper'))) {
+    // eslint-disable-next-line no-new
+    new Swiper('.news__swiper-wrapper', {
+      loop: false,
+
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+          allowTouchMove: true,
+          grid: {
+            rows: 2,
+          },
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+          allowTouchMove: true,
+          grid: {
+            rows: 2,
+          },
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 32,
+          allowTouchMove: false,
+        },
+      },
+
+      navigation: {
+        nextEl: '.news__swiper-button--next',
+        prevEl: '.news__swiper-button--prev',
+      },
+
+      pagination: {
+        el: '.news__swiper-pagination',
+        clickable: false,
+        // eslint-disable-next-line object-shorthand
+        renderBullet: function (index, className) {
+          return '<span class="' + className + ' news__swiper-bullet">' + (index + 1) + "</span>";
+        },
+      },
+    });
+  }
+
+};
+
+export {setHeroSwiper, setProgramsSwiper, setReviewsSwiper, setNewsSwiper};
