@@ -31,10 +31,13 @@
   border-radius: 30px;
   cursor: pointer;
   word-break: break-all;
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 .main-nav__toggle span {
-  display: block;
   font-size: 14px;
   font-weight: 500;
   line-height: 14px;
@@ -126,6 +129,19 @@
   letter-spacing: 0.32px;
   text-transform: uppercase;
   max-width: 250px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus-visible {
+    opacity: 1;
+    outline: none;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 .main-nav--opened {
@@ -136,7 +152,7 @@
   }
 }
 
-.main-nav__logo-wrapper {
+.main-nav__logo-link {
   &:disabled {
     opacity: 0.4;
   }
@@ -147,6 +163,7 @@
 
   &:focus-visible {
     opacity: 0.8;
+    outline: none;
   }
 
   &:active {

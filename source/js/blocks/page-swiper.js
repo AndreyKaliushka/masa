@@ -146,7 +146,7 @@ const setNewsSwiper = () => {
 
       pagination: {
         el: '.news__swiper-pagination',
-        clickable: false,
+        clickable: true,
         // eslint-disable-next-line object-shorthand
         renderBullet: function (index, className) {
           return '<span class="' + className + ' news__swiper-bullet">' + (index + 1) + "</span>";

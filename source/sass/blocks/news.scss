@@ -83,8 +83,7 @@
   align-items: end;
 
   @include vp-1199 {
-    justify-content: center;
-    align-items: center;
+    max-width: unset;
   }
 }
 
@@ -261,6 +260,20 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
+  stroke: $color-light-blue;
+
+  &:hover {
+    background-color: $color-default-white;
+  }
+
+  &:focus-visible {
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    background-color: $color-default-white;
+    stroke: rgba(49, 109, 194, 0.7);
+  }
 
   &::after {
     content: unset;
@@ -283,6 +296,21 @@
   line-height: 20px; /* 125% */
   margin-left: 10px;
   margin-right: 10px;
+
+  &:hover {
+    border: 1px solid $color-light-blue;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border: 1px solid $color-light-blue;
+  }
+
+  &:active {
+    border: 1px solid transparent;
+    background-color: rgba(39, 86, 153, 1);
+    color: $color-default-white;
+  }
 }
 
 .swiper-pagination-bullet-active {

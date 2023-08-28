@@ -18,6 +18,7 @@
 }
 
 .submenu__button {
+  color: rgba(255, 255, 255, 0.7);
   padding: 0;
   margin: 0;
   display: flex;
@@ -26,6 +27,19 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  &:focus-visible {
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 1);
+  }
 }
 
 .submenu--opened .submenu__button {
@@ -43,8 +57,6 @@
 }
 
 .submenu__button span {
-  color: $color-default-white;
-  opacity: 0.7;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
@@ -54,8 +66,8 @@
   max-width: 250px;
 }
 
-.submenu--opened .submenu__button span {
-  opacity: 1;
+.submenu--opened .submenu__button {
+    color: rgba(255, 255, 255, 1);
 }
 
 .submenu__list-item {
@@ -75,6 +87,18 @@
   line-height: 16px; /* 100% */
   text-transform: capitalize;
   max-width: 200px;
-  color: $color-default-white;
-  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.7);
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+
+  &:focus-visible {
+    color: rgba(255, 255, 255, 1);
+    outline: none;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 1);
+  }
 }

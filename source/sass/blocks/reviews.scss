@@ -287,6 +287,21 @@
   right: unset;
   width: 22px;
   height: 22px;
+  border-radius: 50%;
+  stroke: $color-light-blue;
+
+  &:hover {
+    background-color: $color-default-white;
+  }
+
+  &:focus-visible {
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    background-color: $color-default-white;
+    stroke: rgba(49, 109, 194, 0.7);
+  }
 
   &::after {
     content: unset;

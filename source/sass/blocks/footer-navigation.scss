@@ -39,6 +39,7 @@
 
   &:focus-visible {
     color: $color-light-blue;
+    outline: none;
   }
 
   &:active {
