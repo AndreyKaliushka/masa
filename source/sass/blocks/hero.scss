@@ -194,6 +194,7 @@
   min-height: 187px;
   display: flex;
   align-items: center;
+  margin-top: -1px;
 
   @include vp-1199 {
     padding: 30px 40px 20px;
@@ -242,6 +243,7 @@
   justify-content: space-between;
   border-radius: 0px 0px 30px 30px;
   min-height: 89px;
+  margin-top: -1px;
 
   &::after {
     content: "";
@@ -291,6 +293,7 @@
     max-width: 100%;
     padding: 0px 14px 11px 14px;
     border-radius: 0px 0px 14px 0px;
+    margin-top: -1px;
   }
 }
 
@@ -319,6 +322,7 @@
     padding: 10px 15px;
     border-radius: 0px 0px 14px 14px;
     position: relative;
+    margin-top: -1px;
 
     &::after {
       content: "";

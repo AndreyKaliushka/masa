@@ -236,6 +236,7 @@
   max-width: 214px;
   min-height: 57px;
   position: relative;
+  margin-top: -1px;
 
   &::after {
     content: "";
@@ -294,6 +295,7 @@
   align-items: center;
   position: relative;
   justify-content: space-between;
+  margin-top: -1px;
 
   &::after {
     content: "";
