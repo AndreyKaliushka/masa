@@ -149,7 +149,7 @@ const setNewsSwiper = () => {
         clickable: true,
         // eslint-disable-next-line object-shorthand
         renderBullet: function (index, className) {
-          return '<span class="' + className + ' news__swiper-bullet">' + (index + 1) + "</span>";
+          return '<span class="' + className + ' news__swiper-bullet">' + (index + 1) + '</span>';
         },
       },
     });

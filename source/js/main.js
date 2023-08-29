@@ -7,6 +7,7 @@ import {initModal} from './blocks/open-modal';
 import {CustomSelect} from './modules/form-validate/custom-select';
 import {initAccordions} from './blocks/init-accordion';
 import {marker, map} from './blocks/map';
+import { setNewsButton } from './blocks/news-sorter';
 
 setHeroSwiper();
 setProgramsSwiper();
@@ -18,6 +19,7 @@ initModal();
 initAccordions();
 marker;
 map;
+setNewsButton();
 
 // const changeText = () => {
 //   const parent = document.querySelector('.instructions__description');
