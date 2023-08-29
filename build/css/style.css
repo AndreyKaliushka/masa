@@ -5825,7 +5825,7 @@ button,
 }
 @media (max-width: 767px) {
   .news__wrapper {
-    padding: 68px 15px 70px;
+    padding: 68px 15px 20px;
   }
 }
 
@@ -5931,11 +5931,6 @@ button,
 @media (max-width: 1199px) {
   .news__swiper-wrapper {
     height: 800px;
-  }
-}
-@media (max-width: 1199px) {
-  .news__swiper-wrapper {
-    height: 700px;
   }
 }
 @media (max-width: 767px) {
@@ -6344,7 +6339,7 @@ button,
 }
 @media (max-width: 767px) {
   .faq {
-    padding: 70px 15px 70px;
+    padding: 39px 15px 35px;
   }
 }
 
@@ -6454,8 +6449,8 @@ button,
 .faq__accordion-element.is-active .faq__accordion-button {
   -webkit-transition: 0s;
   transition: 0s;
-  padding-top: 36px;
-  padding-bottom: 22px;
+  padding-top: 41px;
+  padding-bottom: 16px;
   min-height: 70px;
 }
 .faq__accordion-element.is-active .faq__accordion-button:hover {
@@ -6475,6 +6470,18 @@ button,
   -webkit-transition: 0s;
   transition: 0s;
   border: 1px solid transparent;
+}
+@media (max-width: 1199px) {
+  .faq__accordion-element.is-active .faq__accordion-button {
+    padding-top: 36px;
+    padding-bottom: 22px;
+  }
+}
+@media (max-width: 767px) {
+  .faq__accordion-element.is-active .faq__accordion-button {
+    padding-top: 21px;
+    padding-bottom: 15px;
+  }
 }
 
 .faq__accordion-button .faq__accordion-icon {
@@ -6716,7 +6723,7 @@ button,
 }
 @media (max-width: 767px) {
   .reviews__wrapper {
-    padding: 39px 15px 67px;
+    padding: 25px 15px 66px;
   }
 }
 
@@ -7351,7 +7358,7 @@ button,
 }
 @media (max-width: 767px) {
   .user-contacts__wrapprer {
-    padding: 70px 15px 67px;
+    padding: 67px 15px 14px;
   }
 }
 

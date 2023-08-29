@@ -22,7 +22,7 @@
   }
 
   @include vp-767 {
-    padding: 68px 15px 70px;
+    padding: 68px 15px 20px;
   }
 }
 
@@ -116,10 +116,6 @@
 .news__swiper-wrapper {
   @include vp-1199 {
     height: 800px;
-  }
-
-  @include vp-1199 {
-    height: 700px;
   }
 
   @include vp-767 {

@@ -16,7 +16,7 @@
   }
 
   @include vp-767 {
-    padding: 70px 15px 70px;
+    padding: 39px 15px 35px;
   }
 }
 
@@ -123,8 +123,8 @@
 
 .faq__accordion-element.is-active .faq__accordion-button {
   transition: 0s;
-  padding-top: 36px;
-  padding-bottom: 22px;
+  padding-top: 41px;
+  padding-bottom: 16px;
   min-height: 70px;
 
   &:hover {
@@ -143,6 +143,16 @@
     border: none;
     transition: 0s;
     border: 1px solid transparent;
+  }
+
+  @include vp-1199 {
+    padding-top: 36px;
+    padding-bottom: 22px;
+  }
+
+  @include vp-767 {
+    padding-top: 21px;
+    padding-bottom: 15px;
   }
 }
 
