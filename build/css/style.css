@@ -5953,9 +5953,9 @@ button,
     margin-bottom: 30px;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .news__swiper {
-    height: 680px;
+    height: 590px;
     margin-bottom: 30px;
   }
 }
