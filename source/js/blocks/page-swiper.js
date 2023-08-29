@@ -118,7 +118,7 @@ const setNewsSwiper = () => {
       breakpoints: {
         320: {
           slidesPerView: 1,
-          spaceBetween: 15,
+          spaceBetween: 20,
           allowTouchMove: true,
           grid: {
             rows: 2,
