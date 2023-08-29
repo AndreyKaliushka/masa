@@ -2984,19 +2984,9 @@ button,
   position: relative;
   bottom: 0;
   max-width: 94px;
-  background-color: #fff;
-  padding: 7px 16px 7px;
-  border-radius: 20px 20px 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 38px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  background-color: #ffffff;
+  padding: 7px 7px;
+  border-radius: 20px 20px 0px 0px;
 }
 .hero__swiper-pagination::after {
   content: "";
@@ -3022,10 +3012,9 @@ button,
 }
 @media (max-width: 767px) {
   .hero__swiper-pagination {
-    padding: 2px 12px;
+    padding: 2px 14px;
     max-width: 80px;
     border-radius: 12px 12px 0px 0px;
-    min-height: 28px;
   }
 }
 
@@ -3052,29 +3041,20 @@ button,
   margin: 0;
   padding: 0;
   max-width: 968px;
-  padding: 29px 50px 10px;
+  padding: 40px 50px 30px;
   border-radius: 0px 30px 30px 0px;
-  min-height: 187px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 @media (max-width: 1199px) {
   .hero__heading-wrapper {
-    padding: 30px 40px 20px;
+    padding: 31px 40px 20px;
     max-width: 97.197640118%;
-    min-height: 136px;
   }
 }
 @media (max-width: 767px) {
   .hero__heading-wrapper {
-    padding: 20px 14px 10px;
+    padding: 20px 14px 16px;
     max-width: 100%;
     border-radius: 0px 16px 16px 0px;
-    min-height: 134px;
   }
 }
 
@@ -3103,7 +3083,7 @@ button,
 
 .hero__slider-wrapper {
   margin: 0;
-  padding: 0 50px 28px;
+  padding: 0 50px 35px;
   position: relative;
   background-color: #ffffff;
   max-width: 772px;
@@ -3119,7 +3099,6 @@ button,
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 0px 0px 30px 30px;
-  min-height: 89px;
 }
 .hero__slider-wrapper::after {
   content: "";
@@ -3176,7 +3155,7 @@ button,
 @media (max-width: 767px) {
   .hero__text-wrapper {
     max-width: 100%;
-    padding: 0px 14px 11px 14px;
+    padding: 0px 14px 5px 14px;
     border-radius: 0px 0px 14px 0px;
   }
 }
@@ -3187,11 +3166,6 @@ button,
   line-height: 26px;
 }
 @media (max-width: 1199px) {
-  .hero__text-wrapper p {
-    line-height: 20px;
-  }
-}
-@media (max-width: 767px) {
   .hero__text-wrapper p {
     line-height: 20px;
     font-size: 14px;
