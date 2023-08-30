@@ -5502,7 +5502,7 @@ button,
     margin: 0;
     padding: 0;
     width: 52px;
-    padding-top: 21px;
+    padding-top: 22px;
   }
 }
 
@@ -5913,6 +5913,9 @@ button,
     overflow-x: auto;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
   }
 }
 
@@ -6021,6 +6024,7 @@ button,
     height: unset;
     max-height: 330px;
     min-height: 240px;
+    border-radius: 12px;
   }
 }
 
@@ -6485,7 +6489,7 @@ button,
 @media (max-width: 767px) {
   .faq__accordion-button {
     min-height: 80px;
-    padding: 19px 14px 19px 14px;
+    padding: 19px 85px 19px 14px;
   }
 }
 
@@ -6686,7 +6690,7 @@ button,
   .faq__accordion-element span {
     font-size: 16px;
     line-height: 18px;
-    max-width: 188px;
+    max-width: unset;
   }
 }
 

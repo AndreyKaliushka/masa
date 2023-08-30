@@ -117,7 +117,7 @@
 
   @include vp-767 {
     min-height: 80px;
-    padding: 19px 14px 19px 14px;
+    padding: 19px 85px 19px 14px;
   }
 }
 
@@ -317,7 +317,7 @@
   @include vp-767 {
     font-size: 16px;
     line-height: 18px;
-    max-width: 188px;
+    max-width: unset;
   }
 }
 
