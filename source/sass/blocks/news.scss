@@ -59,6 +59,7 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 842px;
+  justify-content: center;
 
   @include vp-1199 {
     margin-bottom: 30px;
@@ -108,7 +109,7 @@
 }
 
 .news__button--active {
-  padding: 11px 26px;
+  padding: 11px 25px;
   border: 1px solid $color-light-blue;
   color: $color-light-blue;
 

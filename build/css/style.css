@@ -5898,6 +5898,9 @@ button,
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 842px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media (max-width: 1199px) {
   .news__buttons-wrapper {
@@ -5950,7 +5953,7 @@ button,
 }
 
 .news__button--active {
-  padding: 11px 26px;
+  padding: 11px 25px;
   border: 1px solid #316dc2;
   color: #316dc2;
 }
