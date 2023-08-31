@@ -87,15 +87,20 @@
   background-size: cover;
   width: 100%;
   height: initial;
-  padding: 280px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
   background-repeat: no-repeat;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column-reverse;
 
   @include vp-1199 {
-    padding: 285px 20px 20px 20px;
+    padding: 20px 41px 20px 20px;
+    min-height: 54.688vw;
   }
 
   @include vp-767 {
-    padding: 271px 10px 18px;
+    padding: 18px 10px 18px;
+    min-height: 125vw;
   }
 }
 
@@ -199,7 +204,7 @@
   }
 
   @include vp-1199 {
-    max-width: 173px;
+    max-width: 65.77946768060837%;
     padding-bottom: 1px;
   }
 
@@ -246,13 +251,13 @@
   margin-top: -1px;
 
   @include vp-1199 {
-    max-width: 263px;
-    min-height: 77px;
+    max-width: 100%;
+    min-height: 10.02604166666667vw;
     padding: 5px 18px 10px;
   }
 
   @include vp-767 {
-    min-height: 69px;
+    min-height: 21.5625vw;
     width: 100%;
     max-width: unset;
     padding: 8px 18px 10px;
@@ -270,13 +275,14 @@
 
   @include vp-1199 {
     line-height: 20px;
-    max-width: 181px;
+    max-width: 80%;
   }
 
   @include vp-767 {
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
+    max-width: 84%;
   }
 }
 

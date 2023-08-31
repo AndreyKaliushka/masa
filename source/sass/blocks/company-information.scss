@@ -126,6 +126,8 @@
   line-height: 12px; /* 100% */
   letter-spacing: 0.12px;
   text-transform: uppercase;
+  max-width: 150px;
+
 
   @include vp-1199 {
     margin-bottom: 19px;
