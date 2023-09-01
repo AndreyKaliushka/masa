@@ -14,7 +14,7 @@
 }
 
 .hero__swiper-content {
-  padding: 0 100px 60px;
+  padding: 411px 100px 60px;
   position: relative;
   background-repeat: no-repeat;
   background-color: rgba(2, 102, 193, 1);
@@ -27,12 +27,12 @@
   display: flex;
 
   @include vp-1199 {
-    padding: 0 45px 60px;
+    padding: 677px 45px 60px;
     min-height: 1024px;
   }
 
   @include vp-767 {
-    padding: 0 15px 20px;
+    padding: 236px 15px 20px;
     min-height: 568px;
   }
 }
@@ -164,6 +164,7 @@
     max-width: 80px;
     border-radius: 12px 12px 0px 0px;
     min-height: 28px;
+    padding-bottom: 11px;
   }
 }
 
