@@ -103,7 +103,7 @@
   border-radius: 16px;
   list-style-type: none;
   max-width: 286px;
-  max-height: 398px;
+  max-height: 278px;
   overflow: auto;
   animation-name: animation;
   animation-duration: 2s;
@@ -113,6 +113,10 @@
     min-width: 290px;
     width: 100%;
   }
+}
+
+.main-nav__submenu--opened .main-nav__menu {
+  max-height: 398px;
 }
 
 .main-nav__menu-item {

@@ -54,9 +54,11 @@ const openCloseSubMenu = () => {
         if (subMenu.classList.contains('submenu--closed')) {
           subMenu.classList.remove('submenu--closed');
           subMenu.classList.add('submenu--opened');
+          navMain.classList.add('main-nav__submenu--opened');
         } else {
           subMenu.classList.add('submenu--closed');
           subMenu.classList.remove('submenu--opened');
+          navMain.classList.remove('main-nav__submenu--opened');
         }
       }
     }));

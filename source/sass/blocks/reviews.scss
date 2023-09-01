@@ -296,6 +296,7 @@
 
   &:focus-visible {
     background-color: $color-default-white;
+    outline: none;
   }
 
   &:active {

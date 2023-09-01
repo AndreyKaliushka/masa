@@ -11,6 +11,10 @@
     z-index: 1;
     top: 0;
   }
+
+  @include vp-767 {
+    min-height: 177.5vw;
+  }
 }
 
 .hero__swiper-content {
@@ -185,6 +189,12 @@
   background-color: $color-light-blue;
 }
 
+.swiper-pagination-bullet {
+  &:focus-visible {
+    outline: none;
+  }
+}
+
 .hero__heading-wrapper {
   background-color: $color-default-white;
   margin: 0;
@@ -337,4 +347,8 @@
       background-size: 10px 10px;
     }
   }
+}
+
+.hero__slider-button {
+  background-color: $color-default-white;
 }
