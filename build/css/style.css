@@ -4772,7 +4772,7 @@ button,
   }
 }
 
-.company-modal__input span {
+.company-modal__input label {
   margin: 0;
   padding: 0;
   margin-bottom: 8px;
@@ -4784,13 +4784,13 @@ button,
   line-height: 18px;
 }
 @media (max-width: 1199px) {
-  .company-modal__input span {
+  .company-modal__input label {
     line-height: 20px;
     margin-bottom: 7px;
   }
 }
 @media (max-width: 767px) {
-  .company-modal__input span {
+  .company-modal__input label {
     line-height: 14px;
     margin-bottom: 7px;
   }
@@ -4828,16 +4828,16 @@ button,
   }
 }
 
-.company-modal__input input:hover + span {
+.company-modal__input input:hover + label {
   color: rgb(72, 72, 72);
 }
-.company-modal__input input:focus + span {
+.company-modal__input input:focus + label {
   color: rgb(72, 72, 72);
 }
-.company-modal__input input:focus-visible + span {
+.company-modal__input input:focus-visible + label {
   color: rgb(72, 72, 72);
 }
-.company-modal__input input:active + span {
+.company-modal__input input:active + label {
   color: rgb(72, 72, 72);
 }
 
@@ -7587,7 +7587,7 @@ button,
   }
 }
 
-.user-contacts__input p {
+.user-contacts__input label {
   margin: 0;
   padding: 0;
   margin-bottom: 8px;
@@ -7599,13 +7599,13 @@ button,
   line-height: 18px;
 }
 @media (max-width: 1199px) {
-  .user-contacts__input p {
+  .user-contacts__input label {
     line-height: 20px;
     margin-bottom: 7px;
   }
 }
 @media (max-width: 767px) {
-  .user-contacts__input p {
+  .user-contacts__input label {
     line-height: 14px;
     margin-bottom: 12px;
     font-size: 12px;
@@ -7670,16 +7670,16 @@ button,
   }
 }
 
-.user-contacts__input input:hover + p {
+.user-contacts__input input:hover + label {
   color: rgb(240, 239, 233);
 }
-.user-contacts__input input:focus + p {
+.user-contacts__input input:focus + label {
   color: rgb(240, 239, 233);
 }
-.user-contacts__input input:focus-visible + p {
+.user-contacts__input input:focus-visible + label {
   color: rgb(240, 239, 233);
 }
-.user-contacts__input input:active + p {
+.user-contacts__input input:active + label {
   color: rgb(240, 239, 233);
 }
 

@@ -137,7 +137,7 @@
   }
 }
 
-.company-modal__input span {
+.company-modal__input label {
   margin: 0;
   padding: 0;
   margin-bottom: 8px;
@@ -196,19 +196,19 @@
 }
 
 .company-modal__input input {
-  &:hover + span {
+  &:hover + label {
     color: rgba(72, 72, 72, 1);
   }
 
-  &:focus + span {
+  &:focus + label {
     color: rgba(72, 72, 72, 1);
   }
 
-  &:focus-visible + span {
+  &:focus-visible + label {
     color: rgba(72, 72, 72, 1);
   }
 
-  &:active + span {
+  &:active + label {
     color: rgba(72, 72, 72, 1);
   }
 }
