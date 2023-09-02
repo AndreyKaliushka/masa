@@ -352,3 +352,11 @@
 .hero__slider-button {
   background-color: $color-default-white;
 }
+
+.hero__swiper-content {
+  display: none;
+}
+
+.swiper-slide-active .hero__swiper-content {
+  display: block;
+}

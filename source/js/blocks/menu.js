@@ -5,6 +5,7 @@ const mainNav = document.querySelector('.main-nav__menu-wrapper');
 const listItems = document.querySelectorAll('.main-nav__menu-item');
 const subMenuButtons = document.querySelectorAll('.submenu__button');
 const subMenuItems = document.querySelectorAll('.submenu__list-item');
+const isEscapeKey = (evt) => evt.key === 'Escape';
 window.scrollLock = new ScrollLock();
 
 navMain.classList.remove('main-nav--nojs');
@@ -16,6 +17,7 @@ const openCloseMenu = () => {
         navMain.classList.remove('main-nav--closed');
         navMain.classList.add('main-nav--opened');
         window.scrollLock.disableScrolling();
+        document.addEventListener('keydown', onDocumentEscapeKeydown);
       } else {
         navMain.classList.add('main-nav--closed');
         navMain.classList.remove('main-nav--opened');
@@ -74,5 +76,15 @@ subMenuItems.forEach((subMenuItem) => subMenuItem.addEventListener('click', (evt
     }
   }
 }));
+
+const onDocumentEscapeKeydown = (evt) => {
+  if (isEscapeKey(evt)) {
+    evt.preventDefault();
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
+    window.scrollLock.enableScrolling();
+    document.removeEventListener('keydown', onDocumentEscapeKeydown);
+  }
+};
 
 export {openCloseMenu, openCloseSubMenu};

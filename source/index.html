@@ -210,7 +210,7 @@
               <div class="company__text-wrapper">
                 <h3>Наша цель</h3>
                 <p>Наша деятельность направлена на&nbsp;повышение квалификации молодых специалистов на&nbsp;ранних и&nbsp;средних стадиях карьеры, предоставляя им&nbsp;инструменты для решения сложных проблем, с&nbsp;которыми сталкиваются Израиль и&nbsp;еврейские общины во&nbsp;всем мире. Цель центра&nbsp;&mdash; наделить этих людей способностью инициировать значимые изменения.</p>
-                <button class="company__button general-button" type="button" aria-label="Открыть форму обраной связи.">
+                <button class="company__button general-button" type="button" aria-label="Открыть форму обраной связи." data-open-modal="modal-1">
                   <span>подробнее о проекте</span>
                   <span class="general-button__icon-wrapper">
                     <svg class="general-button__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -860,7 +860,7 @@
                       </div>
                       <div class="reviews__programm-content">
                         <h3>Дата</h3>
-                        <span>Осень 2022</span>
+                        <span>Лето 2022</span>
                       </div>
                     </div>
                   </div>
@@ -1120,66 +1120,69 @@
         </div>
       </footer>
 
-      <dialog class="company-modal">
-        <div class="company-modal__container">
-          <button class="company-modal__button-close" type="button">
-            <svg class="company-modal__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite.svg#cross"></use>
-            </svg>
-          </button>
-          <h3>Напишите нам</h3>
-          <p>Оставьте ваши контакты,<br> если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
-          <div class="company-modal__form" data-form-validate="data-form-validate" data-callback="base">
-            <form method="post" action="https://echo.htmlacademy.ru/">
-              <div class="company-modal__form-wrapper">
-                <div class="custom-input company-modal__input" data-validate-type="text" data-limitation="name" data-required="data-required">
-                  <input type="text" name="user-name-1" placeholder="" id="name" aria-label="Введите ваше имя."/>
-                  <label for="name">Имя</label>
-                </div>
-
-                <div class="custom-input company-modal__input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-required="data-required">
-                  <input type="tel" name="user-phone" placeholder="" id="mobile-number" aria-label="Введите ваш телефон."/>
-                  <label for="mobile-number">Телефон</label>
-                </div>
-
-                <div class="custom-select company-modal__select" data-select data-validate-type="select" data-name="some-name" data-id="id-example-2" data-required="true">
-                  <button class="custom-select__button company-modal__button-select" type="button" aria-label="Выберите одну из опций">
-                    <span class="custom-select__text company-modal__select-text"></span>
-                    <span class="custom-select__icon company-modal__select-icon"></span>
-                  </button>
-                  <p>Выберите город</p>
-                  <ul class="custom-select__list company-modal__select-list" role="listbox">
-                    <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
-                    <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Москва</li>
-                    <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Новосибирск</li>
-                    <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Екатеринбург</li>
-                    <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Владивосток</li>
-                    <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Томск</li>
-                  </ul>
-                </div>
-
-                <div class="custom-toggle custom-toggle--checkbox company-modal__checkbox" data-validate-type="checkbox" data-message-base="">
-                  <label>
-                    <input type="checkbox" value="user-agreement-1" name="user-agreement"/>
-                    <span class="custom-toggle__icon company-modal__toggle-icon" tabindex="0">
-                    </span>
-                    <span class="custom-toggle__label company-modal__checkbox-label">Я согласен на обработку моих персональных данных</span>
-                  </label>
-                </div>
-
-                <button class="company-modal__button general-button" aria-label="Отправить форму обратной связи.">
-                  <span>отправить</span>
-                  <span class="general-button__icon-wrapper">
-                    <svg class="general-button__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <use xlink:href="img/sprite.svg#arrow"></use>
-                    </svg>
-                  </span>
+      <section class="modal modal--preload" data-modal="modal-1">
+        <div class="modal__wrapper">
+          <div class="modal__overlay" data-close-modal="data-close-modal"></div>
+              <div class="company-modal__container">
+                <button class="company-modal__button-close" type="button" aria-label="Закрыть попап" data-close-modal="data-close-modal" data-focus="data-focus">
+                  <svg class="company-modal__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#cross"></use>
+                  </svg>
                 </button>
+                <h3>Напишите нам</h3>
+                <p>Оставьте ваши контакты,<br> если у&nbsp;вас остались вопросы&nbsp;&mdash; мы&nbsp;на&nbsp;них ответим!</p>
+                <div class="company-modal__form" data-form-validate="data-form-validate" data-callback="base">
+                  <form method="post" action="https://echo.htmlacademy.ru/">
+                    <div class="company-modal__form-wrapper">
+                      <div class="custom-input company-modal__input" data-validate-type="text" data-limitation="name" data-required="data-required">
+                        <input type="text" name="user-name-1" placeholder="" id="name" aria-label="Введите ваше имя."/>
+                        <label for="name">Имя</label>
+                      </div>
+
+                      <div class="custom-input company-modal__input" data-validate-type="phone" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                        <input type="tel" name="user-phone" placeholder="" id="mobile-number" aria-label="Введите ваш телефон."/>
+                        <label for="mobile-number">Телефон</label>
+                      </div>
+
+                      <div class="custom-select company-modal__select" data-select data-validate-type="select" data-name="some-name" data-id="id-example-2" data-required="true">
+                        <button class="custom-select__button company-modal__button-select" type="button" aria-label="Выберите одну из опций">
+                          <span class="custom-select__text company-modal__select-text"></span>
+                          <span class="custom-select__icon company-modal__select-icon"></span>
+                        </button>
+                        <p>Выберите город</p>
+                        <ul class="custom-select__list company-modal__select-list" role="listbox">
+                          <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Санкт-Петербург</li>
+                          <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Москва</li>
+                          <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Новосибирск</li>
+                          <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Екатеринбург</li>
+                          <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Владивосток</li>
+                          <li class="custom-select__item company-modal__select-item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Томск</li>
+                        </ul>
+                      </div>
+
+                      <div class="custom-toggle custom-toggle--checkbox company-modal__checkbox" data-validate-type="checkbox" data-message-base="">
+                        <label>
+                          <input type="checkbox" value="user-agreement-1" name="user-agreement"/>
+                          <span class="custom-toggle__icon company-modal__toggle-icon" tabindex="0">
+                          </span>
+                          <span class="custom-toggle__label company-modal__checkbox-label">Я согласен на обработку моих персональных данных</span>
+                        </label>
+                      </div>
+
+                      <button class="company-modal__button general-button" aria-label="Отправить форму обратной связи.">
+                        <span>отправить</span>
+                        <span class="general-button__icon-wrapper">
+                          <svg class="general-button__icon" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="img/sprite.svg#arrow"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
-            </form>
-          </div>
         </div>
-      </dialog>
+      </section>
     </div>
 
     <script src="js/vendor.min.js" type="module"></script>

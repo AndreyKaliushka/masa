@@ -3,7 +3,6 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {setHeroSwiper, setProgramsSwiper, setReviewsSwiper, setNewsSwiper} from './blocks/page-swiper';
 import {openCloseMenu, openCloseSubMenu} from './blocks/menu';
-import {initModal} from './blocks/open-modal';
 import {CustomSelect} from './modules/form-validate/custom-select';
 import {initAccordions} from './blocks/init-accordion';
 import {marker, map} from './blocks/map';
@@ -18,7 +17,6 @@ window.addEventListener('DOMContentLoaded', () => {
   setNewsSwiper();
   openCloseMenu();
   openCloseSubMenu();
-  initModal();
   initAccordions();
   // eslint-disable-next-line no-unused-expressions
   marker;
