@@ -3048,7 +3048,7 @@ button,
   background-size: cover;
   width: 100%;
   height: 100%;
-  min-height: 800px;
+  min-height: 55.5555555556vw;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
@@ -3059,13 +3059,13 @@ button,
 @media (max-width: 1199px) {
   .hero__swiper-content {
     padding: 677px 45px 60px;
-    min-height: 1024px;
+    min-height: 133.3333333333vw;
   }
 }
 @media (max-width: 767px) {
   .hero__swiper-content {
     padding: 236px 15px 20px;
-    min-height: 568px;
+    min-height: 177.5vw;
   }
 }
 
@@ -3276,7 +3276,7 @@ button,
     padding: 20px 14px 10px;
     max-width: 100%;
     border-radius: 0px 16px 16px 0px;
-    min-height: 134px;
+    min-height: 41.875vw;
   }
 }
 
@@ -3298,8 +3298,8 @@ button,
 }
 @media (max-width: 767px) {
   .hero__heading-wrapper h2 {
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 6.875vw;
+    line-height: 8.125vw;
   }
 }
 
@@ -3382,6 +3382,13 @@ button,
     padding: 0px 14px 11px 14px;
     border-radius: 0px 0px 14px 0px;
     margin-top: -1px;
+    min-height: 28.4375vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -3397,8 +3404,8 @@ button,
 }
 @media (max-width: 767px) {
   .hero__text-wrapper p {
-    line-height: 20px;
-    font-size: 14px;
+    line-height: 6.25vw;
+    font-size: 4.375vw;
   }
 }
 
@@ -3414,6 +3421,13 @@ button,
     border-radius: 0px 0px 14px 14px;
     position: relative;
     margin-top: -1px;
+    min-height: 19.375vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .hero__button-wrapper::after {
     content: "";
@@ -3437,7 +3451,17 @@ button,
 }
 
 .swiper-slide-active .hero__swiper-content {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  .hero__swiper-content--first .hero__heading-wrapper,
+.hero__swiper-content--second .hero__heading-wrapper {
+    min-height: 34.875px;
+    padding-bottom: 12px;
+  }
 }
 
 .main-header {
@@ -6066,7 +6090,7 @@ button,
 }
 @media (max-width: 1199px) {
   .news__button--active {
-    padding: 11px 19px;
+    padding: 11px 18px;
   }
 }
 @media (max-width: 767px) {

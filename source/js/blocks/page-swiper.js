@@ -1,37 +1,32 @@
 import Swiper from '../vendor/swiper';
 
+let heroSwiper = new Swiper('.hero__swiper-wrapper', {
+  // Optional parameters
+  loop: true,
 
-const setHeroSwiper = () => {
-  if (document.body.contains(document.querySelector('.hero__swiper-wrapper'))) {
-    // eslint-disable-next-line no-new
-    new Swiper('.hero__swiper-wrapper', {
-      // Optional parameters
-      loop: true,
+  // If we need pagination
+  pagination: {
+    el: '.hero__swiper-pagination',
+    clickable: true,
+  },
 
-      // If we need pagination
-      pagination: {
-        el: '.hero__swiper-pagination',
-        clickable: true,
-      },
+  breakpoints: {
+    320: {
+      allowTouchMove: true,
+    },
+    768: {
+      allowTouchMove: true,
+    },
+    1200: {
+      allowTouchMove: false,
+    },
+  },
 
-      breakpoints: {
-        320: {
-          allowTouchMove: true,
-        },
-        768: {
-          allowTouchMove: true,
-        },
-        1200: {
-          allowTouchMove: false,
-        },
-      },
-
-      // autoplay: {
-      //   delay: 3000,
-      // },
-    });
-  }
-};
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+});
 
 const setProgramsSwiper = () => {
   if (document.body.contains(document.querySelector('.programs__swiper-wrapper'))) {
@@ -157,4 +152,4 @@ const setNewsSwiper = () => {
 
 };
 
-export {setHeroSwiper, setProgramsSwiper, setReviewsSwiper, setNewsSwiper};
+export {heroSwiper, setProgramsSwiper, setReviewsSwiper, setNewsSwiper};

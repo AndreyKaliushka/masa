@@ -1,5 +1,6 @@
 import {ScrollLock} from '../../utils/scroll-lock';
 import {FocusLock} from '../../utils/focus-lock';
+import {heroSwiper} from '../../blocks/page-swiper';
 
 export class Modals {
   constructor(settings = {}) {
@@ -152,7 +153,7 @@ export class Modals {
     this._setSettings(modalName);
     modal.classList.add('is-active');
     window.scrollTo(0, 0);
-
+    heroSwiper.disable();
     if (!this._openedModalElement) {
       this._scrollLock.disableScrolling();
     }
@@ -187,6 +188,7 @@ export class Modals {
     modal.classList.remove('is-active');
     this._removeListeners(modal);
     this._stopInteractive(modal);
+    heroSwiper.enable();
 
     if (this._closeCallback) {
       this._closeCallback();
