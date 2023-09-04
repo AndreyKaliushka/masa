@@ -359,15 +359,6 @@
   background-color: $color-default-white;
 }
 
-.hero__swiper-content {
-  display: none;
-}
-
-.swiper-slide-active .hero__swiper-content {
-  display: flex;
-}
-
-
 .hero__swiper-content--first .hero__heading-wrapper,
 .hero__swiper-content--second .hero__heading-wrapper
 {

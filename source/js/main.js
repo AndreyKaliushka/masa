@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {heroSwiper, setProgramsSwiper, setReviewsSwiper, setNewsSwiper} from './blocks/page-swiper';
+import {setHeroSwiper, setProgramsSwiper, setReviewsSwiper, setNewsSwiper} from './blocks/page-swiper';
 import {openCloseMenu, openCloseSubMenu} from './blocks/menu';
 import {CustomSelect} from './modules/form-validate/custom-select';
 import {initAccordions} from './blocks/init-accordion';
@@ -10,7 +10,7 @@ import {setNewsButton} from './blocks/news-sorter';
 
 window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
-  heroSwiper;
+  setHeroSwiper();
   setProgramsSwiper();
   setReviewsSwiper();
   setNewsSwiper();

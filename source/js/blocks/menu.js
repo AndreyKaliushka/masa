@@ -1,5 +1,4 @@
 import {ScrollLock} from '../utils/scroll-lock';
-import {heroSwiper} from '../blocks/page-swiper';
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
 const mainNav = document.querySelector('.main-nav__menu-wrapper');
@@ -19,12 +18,10 @@ const openCloseMenu = () => {
         navMain.classList.add('main-nav--opened');
         window.scrollLock.disableScrolling();
         document.addEventListener('keydown', onDocumentEscapeKeydown);
-        heroSwiper.disable();
       } else {
         navMain.classList.add('main-nav--closed');
         navMain.classList.remove('main-nav--opened');
         window.scrollLock.enableScrolling();
-        heroSwiper.enable();
       }
     });
   }
@@ -37,7 +34,6 @@ document.addEventListener('click', (evt) => {
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened');
       window.scrollLock.enableScrolling();
-      heroSwiper.enable();
     }
   }
 });
@@ -48,7 +44,6 @@ listItems.forEach((listItem) => listItem.addEventListener('click', (evt) => {
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened');
       window.scrollLock.enableScrolling();
-      heroSwiper.enable();
     }
   }
 }));
@@ -78,7 +73,6 @@ subMenuItems.forEach((subMenuItem) => subMenuItem.addEventListener('click', (evt
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened');
       window.scrollLock.enableScrolling();
-      heroSwiper.enable();
     }
   }
 }));
@@ -90,7 +84,6 @@ const onDocumentEscapeKeydown = (evt) => {
     navMain.classList.remove('main-nav--opened');
     window.scrollLock.enableScrolling();
     document.removeEventListener('keydown', onDocumentEscapeKeydown);
-    heroSwiper.enable();
   }
 };
 
